@@ -1,13 +1,15 @@
 import React from 'react';
 import MainView from './MainView';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import currencies from './Reducer';
 
-let store = createStore(
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
   currencies,
-  applyMiddleware(thunk),
+  composeEnhancers(applyMiddleware(thunk))
 );
 
 export default class App extends React.Component {
