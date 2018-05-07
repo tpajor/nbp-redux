@@ -10,34 +10,34 @@ export default class Input extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const value = parseInt(this.state.numberOfData, 10);
-    this.props.getDataForChart(value);
+    this.props.getInputedNumberOfLastRates(value, this.props.currencyCodeToViewInDetail);
   };
 
   render() {
     const { numberOfData } = this.state;
-    const { inputError, errorMessage } = this.props;
+    const { detailsInputError, detailsInputErrorMessage } = this.props;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-2 Input'}>
           <input className="form-control-plaintext"
             type="text" 
-            value={this.props.code.toUpperCase()}
+            value={this.props.currencyCodeToViewInDetail.toUpperCase()}
             readOnly
           />
         </div>
         <div className={'form-group col-6 Form'}>
-          <input className={`form-control ${inputError ? 'is-invalid': ''}`}
+          <input className={`form-control ${detailsInputError ? 'is-invalid': ''}`}
             type="text" 
             value={numberOfData}
             onChange={event => this.setState({ numberOfData: event.target.value })}
             placeholder="Wpisz liczbę ostatnich kursów"
           />
-          {(inputError) ?
-            <p style={{color: 'red'}}>{errorMessage}</p> :
+          {(detailsInputError) ?
+            <p style={{color: 'red'}}>{detailsInputErrorMessage}</p> :
             ''
           }
         </div>
-        <button type="submit" className={'btn btn-primary col-4 SearchButton'} disabled={this.props.code === ''}>Pokaż</button>
+        <button type="submit" className={'btn btn-primary col-4 SearchButton'} disabled={this.props.currencyCodeToViewInDetail === ''}>Pokaż</button>
       </form> 
     );
   }

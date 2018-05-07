@@ -22,7 +22,7 @@ const Card = (props) => {
           </p>
           {props.isTemporary ? 
             '' :
-            <button className={'DeleteCardButton'} onClick={() => props.deleteCard(props.cardData)}>X</button>
+            <button className={'DeleteCardButton'} onClick={() => props.deleteCard(props.cardData.id)}>X</button>
           }
         </div>
       </div>
@@ -33,7 +33,7 @@ const Card = (props) => {
       </div>
       { (props.isTemporary) ?
         <div className={'DoubleButton'}>
-          <button className={'SaveButton'} onClick={() => props.saveCard(props.cardData)}>
+          <button className={'SaveButton'} onClick={() => props.addCard(props.cardData)}>
             Zapisz
           </button> 
           <button className={'HalfCardButton'} onClick={() => props.showDetails(props.cardData.code)}>
