@@ -1,0 +1,8 @@
+{
+  "short_name": "Kursy walut NBP",
+  "name": "Wyświetlanie kursów walut z API NBP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
