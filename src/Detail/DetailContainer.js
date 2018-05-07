@@ -5,7 +5,7 @@ import Clock from 'react-live-clock';
 import Input from './Input';
 import Chart from './Chart';
 
-import '../App.css';
+import './DetailContainer.css';
 
 export default class DetailContainer extends React.Component {
   state = { 
@@ -63,7 +63,7 @@ export default class DetailContainer extends React.Component {
     return (
       <div  className={'col-8 DetailView'}>
         <Clock format={'YYYY-MM-DD HH:mm:ss'} ticking={true} timezone={'Europe/Warsaw'} />
-        <div className={'Chart'} id={'Chart'}>
+        <div id={'Chart'} className={'Chart'}>
           <Input code={this.props.code}
             getDataForChart={this.getDataForChart}
             inputError={inputError}

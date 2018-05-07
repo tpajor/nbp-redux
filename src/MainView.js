@@ -3,7 +3,7 @@ import React from 'react';
 import SearchContainer from './Search/SearchContainer';
 import DetailContainer from './Detail/DetailContainer';
 
-import './App.css';
+import './MainView.css';
 
 export default class MainView extends React.Component {
   state = { cardForDetailedShow: '' }

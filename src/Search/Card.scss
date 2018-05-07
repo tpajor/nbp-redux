@@ -1,27 +1,3 @@
-.MainView {
-  margin: 0 auto;
-  padding: 0;
-}
-
-.SearchView {
-  border: 2px solid gray;
-  border-style: none solid none none;
-  min-height: 100vh;
-}
-
-.Form {
-  margin: 20px 0 20px 0;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  position: relative;
-}
-
-.SearchButton {
-  position: absolute;
-  margin-top: 20px;
-}
-
 .Card {
   height: 150px;
   width: 70%;
@@ -44,11 +20,6 @@
   text-align: center;
 }
 
-.CardMainCellText {
-  font-size: 2em;
-  margin-top: 15%;
-}
-
 .Left {
   border-style: none solid solid none;
 }
@@ -60,6 +31,11 @@
 .Right {
   border-style: none none solid solid;
   position: relative;
+}
+
+.CardMainCellText {
+  font-size: 2em;
+  margin-top: 15%;
 }
 
 .DeleteCardButton {
@@ -105,25 +81,4 @@
   background-color: #ccc;
   cursor: pointer;
   border: none;
-}
-
-.DetailView {
-  min-height: 100vh;
-}
-
-.Chart {
-  height: auto;
-  width: 70%;
-  margin: 20px 20% 0 10%;
-  padding: 0 10% 5% 5%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 5px 5px #aaa;
-}
-
-.Input {
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  margin: 20px 0 20px 0;
 }

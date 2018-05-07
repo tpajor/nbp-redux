@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import uuid from 'uuid';
 
 import Search from './Search';
 import Card from './Card';
 import CardList from './CardList';
 
-import '../App.css';
+import './SearchContainer.css';
 
 export default class SearchContainer extends React.Component {
   state = { 
@@ -31,7 +32,7 @@ export default class SearchContainer extends React.Component {
 
   saveCard = (card) => {
     this.setState(prevState => ({ 
-      cards: prevState.cards.concat(card) 
+      cards: prevState.cards.concat({ ...card, id: uuid.v4() }) 
     }));
   };
 

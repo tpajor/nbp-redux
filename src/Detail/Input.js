@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../App.css';
+import './Input.css';
 
 export default class Input extends React.Component {
   state = { 
