@@ -6,6 +6,8 @@ export const DELETE_CARD = 'DELETE_CARD';
 export const SHOW_DETAILS = 'SHOW_DETAILS';
 export const GET_CURRENCY = 'GET_CURRENCY';
 export const GET_INPUTED_NUMBER_OF_LAST_RATES = 'GET_INPUTED_NUMBER_OF_LAST_RATES';
+export const SIGN_IN_AND_OUT = 'SIGN_IN_AND_OUT';
+export const REGISTER_USER = 'REGISTER_USER';
 
 export function addCard(card) {
   return {
@@ -41,7 +43,7 @@ export function getCurrency(card, searchError, searchErrorMessage) {
 export function getCurrencyRequest(currencyCode) {
   return (dispatch) => {
     if (currencyCode.length > 3 || currencyCode.length < 3) {
-      dispatch(getCurrency(null, true, 'Wpisz trzyliterowy kod waluty, np. "USD", "chf"')) ;
+      dispatch(getCurrency(null, true, 'Wpisz trzyliterowy kod waluty, np. "USD", "chf"'));
     } else {
       axios.get(`http://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/today/`)
         .then(res => {
@@ -79,4 +81,22 @@ export function getInputedNumberOfLastRatesRequest(numberOfRates, currencyCode) 
         });
     }
   }
+}
+
+export function signInOrOut(isSignedIn, userName, pass) {
+  return {
+    type: SIGN_IN_AND_OUT,
+    isSigningIn: isSignedIn,
+    userName,
+    pass,
+  };
+}
+
+export function registerUser(userName, pass, repeatPass) {
+  return {
+    type: REGISTER_USER,
+    userName,
+    pass,
+    repeatPass,
+  };
 }

@@ -7,12 +7,12 @@ import DetailContainer from './Detail/DetailContainer';
 import './MainView.css';
 
 const MainView = (props) => {
-    return (
-      <div className={'row MainView'}>
-        <SearchContainer searchViewData={props.searchViewData}/>
-        <DetailContainer detailViewData={props.detailViewData}/>
-      </div>
-    );
+  return (
+    <div className={'row MainView'}>
+      <SearchContainer searchViewData={props.searchViewData}/>
+      <DetailContainer detailViewData={props.detailViewData}/>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => ({
@@ -27,6 +27,7 @@ const mapStateToProps = (state) => ({
     lastRates: state.lastRates,
     detailsInputError: state.detailsInputError,
     detailsInputErrorMessage: state.detailsInputErrorMessage,
+    signedIn: state.signedIn,
   },
 });
 

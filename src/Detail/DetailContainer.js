@@ -1,8 +1,9 @@
 import React from 'react';
 import Clock from 'react-live-clock';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import { getInputedNumberOfLastRatesRequest } from '../Actions';
+import { getInputedNumberOfLastRatesRequest, signInOrOut } from '../Actions';
 
 import Input from './Input';
 import Chart from './Chart';
@@ -33,6 +34,14 @@ class DetailContainer extends React.Component {
     return (
       <div  className={'col-8 DetailView'}>
         <Clock format={'YYYY-MM-DD HH:mm:ss'} ticking={true} timezone={'Europe/Warsaw'} />
+        {this.props.detailViewData.signedIn ? 
+          <button className="btn btn-primary SignButton" onClick={() => this.props.signInOrOut(false)}>
+            Wyloguj
+          </button> :
+          <Link to='/login' className="btn btn-primary SignButton">
+            Zaloguj
+          </Link>
+        }
         <div id={'Chart'} className={'Chart'}>
           <Input currencyCodeToViewInDetail={this.props.detailViewData.currencyCodeToViewInDetail}
             getInputedNumberOfLastRates={this.props.getInputedNumberOfLastRates}
@@ -50,6 +59,7 @@ class DetailContainer extends React.Component {
 
 const mapDispatchToProps = {
   getInputedNumberOfLastRates: getInputedNumberOfLastRatesRequest,
+  signInOrOut,
 };
 
 export default connect(null, mapDispatchToProps)(DetailContainer);

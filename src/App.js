@@ -1,25 +1,24 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router';
+import { connect } from 'react-redux';
+
 import MainView from './MainView';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import currencies from './Reducer';
+import Login from './Login/Login';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-  currencies,
-  composeEnhancers(applyMiddleware(thunk))
-);
-
-export default class App extends React.Component {
-  render() {
-    return (
+const App = (props) => {
+  return (
+    <BrowserRouter>
       <div>
-        <Provider store={store}>
-          <MainView />
-        </Provider>
+        <Route exact path='/' component={MainView} />
+        <Route path='/login' component={Login} />
       </div>
-    );
-  }
-}
+    </BrowserRouter>
+  );
+};
+
+const mapStateToProps = (state) => ({ 
+  signedIn: state.signedIn 
+});
+
+export default connect(mapStateToProps)(App);

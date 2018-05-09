@@ -1,4 +1,4 @@
-import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES } from './Actions';
+import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN_IN_AND_OUT, REGISTER_USER } from './Actions';
 
 const initialState = {
   cards: [],
@@ -9,6 +9,10 @@ const initialState = {
   lastRates: [],
   detailsInputError: false,
   detailsInputErrorMessage: '',
+  signedIn: false,
+  users: [{name: 'ABC', pass: '123'}, {name: 'QWE', pass: '321'}],
+  signingError: false,
+  signingErrorMessage: '',
 }
 
 function normalizeDataForChart(data, i) {
@@ -61,6 +65,38 @@ export default function currencies(state = initialState, action) {
           detailsInputError: action.detailsInputError,
           detailsInputErrorMessage: action.detailsInputErrorMessage,
         };
+      }
+      
+    }
+
+    case SIGN_IN_AND_OUT: {
+      if (action.isSigningIn) {
+        const user = state.users.find(user => user.name === action.userName);
+        if (user) {
+          if (user.pass === action.pass) {
+            return { ...state, signedIn: true, signingError: false, signingErrorMessage: '', };
+          } else {
+            return { ...state, signingError: true, signingErrorMessage: 'Niepoprawne Hasło', };
+          }
+        } else {
+          return { ...state, signingError: true, signingErrorMessage: 'Brak takiego użytkownika', };
+        }
+      } else {
+        return { ...initialState };
+      }
+    }
+
+    case REGISTER_USER: {
+      const user = state.users.find(user => user.name === action.userName);
+      if (user) {
+        return { ...state, signingError: true, signingErrorMessage: 'Użytkownik już istnieje' };
+      } else {
+        if (action.pass !== action.repeatPass) {
+          return { ...state, signingError: true, signingErrorMessage: 'Hasło nie pasuje do powtórzonego hasła' };
+        } else {
+          const newUsersArray = state.users.concat({ name: action.userName, pass: action.pass })
+          return { ...state, signedIn: true, users: newUsersArray, signingError: false, signingErrorMessage: '' };
+        }
       }
       
     }
