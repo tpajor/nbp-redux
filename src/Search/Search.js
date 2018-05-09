@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Search.css';
 
@@ -31,4 +32,10 @@ export default class Search extends React.Component {
       </form>
     );
   }
-}
+};
+
+Search.propTypes = {
+  getCurrency: PropTypes.func,
+  searchError: PropTypes.bool,
+  searchErrorMessage: PropTypes.string,
+};

@@ -82,7 +82,7 @@ export default function currencies(state = initialState, action) {
           return { ...state, signingError: true, signingErrorMessage: 'Brak takiego użytkownika', };
         }
       } else {
-        return { ...initialState };
+        return { ...initialState, users: state.users };
       }
     }
 

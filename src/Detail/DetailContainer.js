@@ -2,6 +2,7 @@ import React from 'react';
 import Clock from 'react-live-clock';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { getInputedNumberOfLastRatesRequest, signInOrOut } from '../Actions';
 
@@ -60,6 +61,10 @@ class DetailContainer extends React.Component {
 const mapDispatchToProps = {
   getInputedNumberOfLastRates: getInputedNumberOfLastRatesRequest,
   signInOrOut,
+};
+
+DetailContainer.propTypes = {
+  detailViewData: PropTypes.object,
 };
 
 export default connect(null, mapDispatchToProps)(DetailContainer);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { addCard, deleteCard, showDetails, getCurrencyRequest } from '../Actions';
 
@@ -37,6 +38,10 @@ const mapDispatchToProps = {
   deleteCard,
   showDetails,
   getCurrency: getCurrencyRequest,
+};
+
+SearchContainer.propTypes = {
+  searchViewData: PropTypes.object,
 };
 
 export default connect(null, mapDispatchToProps)(SearchContainer);

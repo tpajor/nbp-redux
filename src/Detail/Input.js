@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Input.css';
 
@@ -41,4 +42,11 @@ export default class Input extends React.Component {
       </form> 
     );
   }
+};
+
+Input.propTypes = {
+  currencyCodeToViewInDetail: PropTypes.string,
+  getInputedNumberOfLastRates: PropTypes.func,
+  detailsInputError: PropTypes.bool,
+  detailsInputErrorMessage: PropTypes.string,
 };

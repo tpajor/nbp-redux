@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Card.css';
 
@@ -46,6 +47,14 @@ const Card = (props) => {
       }
     </div>
   );
+};
+
+Card.propTypes = {
+  cardData: PropTypes.object,
+  addCard: PropTypes.func,
+  showDetails: PropTypes.func,
+  isTemporary: PropTypes.bool,
+  deleteCard: PropTypes.func,
 };
 
 export default Card;

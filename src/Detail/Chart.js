@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import PropTypes from 'prop-types';
 
 const Chart = (props) => {
   return(
@@ -32,5 +33,10 @@ const amountOfRatesText = (amount) => {
     return `${amount} ostatnich kursów`;
   }
 }
+
+Chart.propTypes = {
+  dataToPlot: PropTypes.array,
+  contWidth: PropTypes.number,
+};
 
 export default Chart;
