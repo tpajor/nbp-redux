@@ -1,5 +1,6 @@
 import axios from 'axios';
 import uuid from 'uuid';
+import callApi from './apiCaller';
 
 export const ADD_CARD = 'ADD_CARD';
 export const DELETE_CARD = 'DELETE_CARD';
@@ -15,6 +16,14 @@ export function addCard(card) {
     card: card,
     id: uuid.v4(),
   };
+}
+
+export function addCardRequest(card) {
+  return (dispatch) => {
+    return callApi('card', 'post', card).then(res => {
+      dispatch(addCard(card));
+    });
+  }
 }
 
 export function deleteCard(cardId) {

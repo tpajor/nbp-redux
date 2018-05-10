@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addCard, deleteCard, showDetails, getCurrencyRequest } from '../Actions';
+import { addCardRequest, deleteCard, showDetails, getCurrencyRequest } from '../Actions';
 
 import Search from './Search';
 import Card from './Card';
@@ -34,7 +34,7 @@ const SearchContainer = (props) => {
 };
 
 const mapDispatchToProps = {
-  addCard,
+  addCard: addCardRequest,
   deleteCard,
   showDetails,
   getCurrency: getCurrencyRequest,
