@@ -10,7 +10,6 @@ const app = new express();
 const port = process.env.PORT || 8000;
 
 mongoose.Promise = global.Promise;
-console.log(process.env.NODE_ENV)
 const config = {
   mongoURL: process.env.MONGO_URL || 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp',
 };
