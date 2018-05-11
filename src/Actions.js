@@ -180,7 +180,7 @@ export function registerUser(userName) {
 
 export function registerUserRequest(userName, pass, repeatPass, users) {
   return (dispatch) => {
-    const user = users.find(user => user.userName === user);
+    const user = users.find(user => user.userName === userName);
     if (user) {
       return dispatch(signError('Użytkownik już istnieje'));
     } else {
@@ -188,6 +188,7 @@ export function registerUserRequest(userName, pass, repeatPass, users) {
         return dispatch(signError('Hasło nie pasuje do powtórzonego hasła'));
       } else {
         return callApi('user', 'post', { userName, pass, repeatPass }).then(res => {
+          dispatch(fetchUsers());
           dispatch(registerUser(userName));
         });
       }

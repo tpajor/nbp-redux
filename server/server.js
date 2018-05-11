@@ -10,13 +10,12 @@ const app = new express();
 const port = process.env.PORT || 8000;
 
 mongoose.Promise = global.Promise;
-
+console.log(process.env.NODE_ENV)
 const config = {
-  mongoURL: process.env.MONGO_URL || 'mongodb://localhost:27017/nbp',
-  port: process.env.PORT || 8000,
+  mongoURL: process.env.MONGO_URL || 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp',
 };
 
-mongoose.connect(config.mongoURL, (error) => {
+mongoose.connect(config.mongoURL).then(error => {
   if (error) {
     console.error('Please make sure Mongodb is installed and running!');
     throw error;
