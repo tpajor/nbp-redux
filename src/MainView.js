@@ -24,6 +24,8 @@ const mapStateToProps = (state) => ({
     searchErrorMessage: state.searchErrorMessage,
     signedIn: state.signedIn,
     userSignedIn: state.userSignedIn,
+    addCardError: state.addCardError,
+    addCardErrorMessage: state.addCardErrorMessage,
   },
   detailViewData: {
     currencyCodeToViewInDetail: state.currencyCodeToViewInDetail,

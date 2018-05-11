@@ -24,8 +24,16 @@ const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, de
           addCard={addCard}
           showDetails={showDetails}
           isTemporary={true}
+          cards={searchViewData.cards}
         /> :
         <br />
+      }
+      {searchViewData.addCardError ? 
+        <p style={{ color: 'red', textAlign: 'center' }}>
+          <br />
+          {searchViewData.addCardErrorMessage}
+        </p> : 
+        ''
       }
       <CardList cards={searchViewData.cards}
         signedIn={searchViewData.signedIn}

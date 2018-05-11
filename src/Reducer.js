@@ -1,4 +1,4 @@
-import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS, SEARCH_INPUT_ERROR, DETAIL_INPUT_ERROR } from './Actions';
+import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS, SEARCH_INPUT_ERROR, DETAIL_INPUT_ERROR, ADD_CARD_ERROR } from './Actions';
 
 const initialState = {
   cards: [],
@@ -14,6 +14,8 @@ const initialState = {
   users: [],
   signingError: false,
   signingErrorMessage: '',
+  addCardError: false,
+  addCardErrorMessage: '',
 }
 
 function normalizeDataForChart(data, i) {
@@ -32,7 +34,11 @@ export default function currencies(state = initialState, action) {
   switch (action.type) {
     case ADD_CARD: {
       const updateCards = state.cards.concat(action.card);
-      return { ...state, cards: updateCards };
+      return { ...state, cards: updateCards, addCardError: false, addCardErrorMessage: '', };
+    }
+
+    case ADD_CARD_ERROR: {
+      return { ...state, addCardError: true, addCardErrorMessage: 'Karta tej waluty jest już przypięta' }
     }
 
     case DELETE_CARD: {

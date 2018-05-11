@@ -13,6 +13,7 @@ export const POPULATE_USERS = 'POPULATE_USERS';
 export const SEARCH_INPUT_ERROR = 'SEARCH_INPUT_ERROR';
 export const DETAIL_INPUT_ERROR = 'DETAIL_INPUT_ERROR';
 export const SIGN_ERROR = 'SIGN_IN_ERROR';
+export const ADD_CARD_ERROR = 'ADD_CARD_ERROR';
 
 export function addCard(card) {
   return {
@@ -21,18 +22,29 @@ export function addCard(card) {
   };
 }
 
-export function addCardRequest(card, userName, isSignedIn) {
-  return (dispatch) => {
-    const id = uuid.v4();
-    if (isSignedIn) {
-      return callApi('card', 'post', { card: { ...card, id }, userName }).then(res => {
-        dispatch(addCard({ ...card, id }));
-        dispatch(fetchUsers());
-      });
-    } else {
-      dispatch(addCard({ ...card, id }));
-    }
+export function addCardError() {
+  return {
+    type: ADD_CARD_ERROR,
   }
+}
+
+export function addCardRequest(card, userName, isSignedIn, cards) {
+  return (dispatch) => {
+    const cardExists = cards.find(cardFromCardsArray => cardFromCardsArray.code === card.code);
+    if (cardExists) {
+      return dispatch(addCardError());
+    } else {
+      const id = uuid.v4();
+      if (isSignedIn) {
+        return callApi('card', 'post', { card: { ...card, id }, userName }).then(res => {
+          dispatch(addCard({ ...card, id }));
+          dispatch(fetchUsers());
+        });
+      } else {
+        dispatch(addCard({ ...card, id }));
+      }
+      }
+  };
 }
 
 export function deleteCard(cardId) {

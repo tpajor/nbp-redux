@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Card.css';
 
-const Card = ({ cardData, isTemporary, deleteCard, userSignedIn, signedIn, addCard, showDetails }) => {
+const Card = ({ cardData, isTemporary, deleteCard, userSignedIn, signedIn, addCard, showDetails, cards }) => {
   return (
     <div className={'Card'}>
       <div className={'row CardMainContainer'}>
@@ -34,7 +34,7 @@ const Card = ({ cardData, isTemporary, deleteCard, userSignedIn, signedIn, addCa
       </div>
       { (isTemporary) ?
         <div className={'DoubleButton'}>
-          <button className={'SaveButton'} onClick={() => addCard(cardData, userSignedIn, signedIn)}>
+          <button className={'SaveButton'} onClick={() => addCard(cardData, userSignedIn, signedIn, cards)}>
             Przypnij
           </button> 
           <button className={'HalfCardButton'} onClick={() => showDetails(cardData.code)}>
@@ -57,6 +57,7 @@ Card.propTypes = {
   showDetails: PropTypes.func,
   isTemporary: PropTypes.bool,
   deleteCard: PropTypes.func,
+  cards: PropTypes.array,
 };
 
 export default Card;

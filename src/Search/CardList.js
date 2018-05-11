@@ -13,6 +13,7 @@ const CardList = ({ cards, signedIn, userSignedIn, deleteCard, showDetails }) =>
           cardData={card}
           isTemporary={false}
           showDetails={showDetails}
+          cards={cards}
         />
       ).reverse()}
     </div>
@@ -24,7 +25,7 @@ CardList.propTypes = {
   deleteCard: PropTypes.func,
   showDetails: PropTypes.func,
   signedIn: PropTypes.bool,
-  userSignedIn: PropTypes.string
+  userSignedIn: PropTypes.string,
 };
 
 export default CardList;
