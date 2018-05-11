@@ -91,7 +91,10 @@ export default function currencies(state = initialState, action) {
     }
 
     case POPULATE_USERS: {
-      return { ...state, users: action.users.users };
+      if (action.users.users) {
+        return { ...state, users: action.users.users };
+      }
+      return { ...state };
     }
 
     default: {

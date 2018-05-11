@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise;
 const config = {
   mongoURL: process.env.MONGO_URL || 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp',
 };
-
+//mongodb://localhost:27017/nbp
 mongoose.connect(config.mongoURL).then(error => {
   if (error) {
     console.error('Please make sure Mongodb is installed and running!');
