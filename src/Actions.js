@@ -94,7 +94,7 @@ export function getCurrencyRequest(currencyCode) {
     if (currencyCode.length > 3 || currencyCode.length < 3) {
       dispatch(searchInputError('Wpisz trzyliterowy kod waluty, np. "USD", "chf"'));
     } else {
-      axios.get(`http://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/today/`)
+      axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/today/`)
         .then(res => {
           dispatch(getCurrency(res.data));
         })
@@ -126,7 +126,7 @@ export function getInputedNumberOfLastRatesRequest(numberOfRates, currencyCode) 
     } else if (numberOfRates > 250 || numberOfRates <= 0) {
       dispatch(detailInputError('Maksymalna liczba notowań to 250'));
     } else {
-      axios.get(`http://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/last/${numberOfRates}/`)
+      axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/last/${numberOfRates}/`)
         .then(res => {
           dispatch(getInputedNumberOfLastRates(res.data));
         })
