@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { signInOrOut, registerUser } from '../Actions';
+import { signInOrOut, registerUserRequest } from '../Actions';
 
 import './Login.css';
 
@@ -17,9 +18,9 @@ class Login extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     if (this.state.signUp) {
-      this.props.registerUser(this.state.userName, this.state.pass, this.state.repeatPass);
+      this.props.registerUser(this.state.userName, this.state.pass, this.state.repeatPass, this.props.users);
     } else {
-      this.props.signInOrOut(true, this.state.userName, this.state.pass);
+      this.props.signInOrOut(false, this.state.userName, this.state.pass, this.props.users);
     }
   };
 
@@ -85,11 +86,21 @@ const mapStateToProps = (state) => ({
   signingError: state.signingError,
   signingErrorMessage: state.signingErrorMessage,
   signedIn: state.signedIn,
+  users: state.users,
 });
 
 const mapDispatchToProps = {
   signInOrOut: signInOrOut,
-  registerUser,
+  registerUser: registerUserRequest,
+};
+
+Login.propTypes = {
+  signingError: PropTypes.bool,
+  signingErrorMessage: PropTypes.string,
+  signedIn: PropTypes.bool,
+  users: PropTypes.array,
+  signInOrOut: PropTypes.func,
+  registerUser: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

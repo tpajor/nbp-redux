@@ -2,16 +2,16 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import PropTypes from 'prop-types';
 
-const Chart = (props) => {
+const Chart = ({ dataToPlot, contWidth }) => {
   return(
     <div>
       <h3 className="text-center">
-        {(props.dataToPlot !== null) ?
-          amountOfRatesText(props.dataToPlot.length) :
+        {(dataToPlot !== null) ?
+          amountOfRatesText(dataToPlot.length) :
           ''
         }
       </h3>
-      <LineChart width={props.contWidth} height={props.contWidth * 0.6} data={props.dataToPlot}>
+      <LineChart width={contWidth} height={contWidth * 0.6} data={dataToPlot}>
         <XAxis dataKey="name" hide={true} />
         <YAxis domain={[dataMin => ((dataMin * 0.99).toFixed(2)), dataMax => ((dataMax * 1.01).toFixed(2))]} />
         <CartesianGrid strokeDasharray="3 3" />

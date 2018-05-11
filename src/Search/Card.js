@@ -3,46 +3,46 @@ import PropTypes from 'prop-types';
 
 import './Card.css';
 
-const Card = (props) => {
+const Card = ({ cardData, isTemporary, deleteCard, userSignedIn, signedIn, addCard, showDetails }) => {
   return (
     <div className={'Card'}>
       <div className={'row CardMainContainer'}>
         <div className={'col-4 CardMainCell Left'}>
           <p className={'CardMainCellText'}>
-            {props.cardData.code}
+            {cardData.code}
           </p>
         </div>
         <div className={'col-4 CardMainCell Mid'}>
           <p className={'CardMainCellText'}>
-            {props.cardData.rates[0].ask}  
+            {cardData.rates[0].ask}  
           </p>  
         </div>
         <div className={'col-4 CardMainCell Right'}>
           <p className={'CardMainCellText'}>
-          {props.cardData.rates[0].bid}
+          {cardData.rates[0].bid}
           </p>
-          {props.isTemporary ? 
+          {isTemporary ? 
             '' :
-            <button className={'DeleteCardButton'} onClick={() => props.deleteCard(props.cardData.id)}>X</button>
+            <button className={'DeleteCardButton'} onClick={() => deleteCard(cardData.id, userSignedIn, signedIn)}>X</button>
           }
         </div>
       </div>
       <div className={'CardNameCell'}>
         <p>
-          {props.cardData.currency}
+          {cardData.currency}
         </p>
       </div>
-      { (props.isTemporary) ?
+      { (isTemporary) ?
         <div className={'DoubleButton'}>
-          <button className={'SaveButton'} onClick={() => props.addCard(props.cardData)}>
-            Zapisz
+          <button className={'SaveButton'} onClick={() => addCard(cardData, userSignedIn, signedIn)}>
+            Przypnij
           </button> 
-          <button className={'HalfCardButton'} onClick={() => props.showDetails(props.cardData.code)}>
-            Szczegóły
+          <button className={'HalfCardButton'} onClick={() => showDetails(cardData.code)}>
+            Dodaj do wykresu
           </button>
         </div> :
-        <button className={'CardButton'} onClick={() => props.showDetails(props.cardData.code)}>
-          Szczegóły
+        <button className={'CardButton'} onClick={() => showDetails(cardData.code)}>
+          Dodaj do wykresu
         </button>
       }
     </div>
@@ -50,6 +50,8 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
+  userSignedIn: PropTypes.string,
+  signedIn: PropTypes.bool,
   cardData: PropTypes.object,
   addCard: PropTypes.func,
   showDetails: PropTypes.func,

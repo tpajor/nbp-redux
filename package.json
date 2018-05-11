@@ -39,6 +39,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
     "react-hot-loader": "^4.1.2"
   }
 }

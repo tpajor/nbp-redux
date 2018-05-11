@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addCardRequest, deleteCard, showDetails, getCurrencyRequest } from '../Actions';
+import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest } from '../Actions';
 
 import Search from './Search';
 import Card from './Card';
@@ -10,24 +10,28 @@ import CardList from './CardList';
 
 import './SearchContainer.css';
 
-const SearchContainer = (props) => {
+const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard }) => {
   return (
     <div className={'col-4 SearchView'}>
-      <Search getCurrency={props.getCurrency}
-        searchError={props.searchViewData.searchError}
-        searchErrorMessage={props.searchViewData.searchErrorMessage}
+      <Search getCurrency={getCurrency}
+        searchError={searchViewData.searchError}
+        searchErrorMessage={searchViewData.searchErrorMessage}
       />
-      {(props.searchViewData.temporaryCard !== null) ?
-        <Card cardData={props.searchViewData.temporaryCard}
-          addCard={props.addCard}
-          showDetails={props.showDetails}
+      {(searchViewData.temporaryCard !== null) ?
+        <Card cardData={searchViewData.temporaryCard}
+          signedIn={searchViewData.signedIn}
+          userSignedIn={searchViewData.userSignedIn}
+          addCard={addCard}
+          showDetails={showDetails}
           isTemporary={true}
         /> :
         <br />
       }
-      <CardList cards={props.searchViewData.cards}
-        deleteCard={props.deleteCard}
-        showDetails={props.showDetails}
+      <CardList cards={searchViewData.cards}
+        signedIn={searchViewData.signedIn}
+        userSignedIn={searchViewData.userSignedIn}
+        deleteCard={deleteCard}
+        showDetails={showDetails}
       />
     </div>
   );
@@ -35,13 +39,17 @@ const SearchContainer = (props) => {
 
 const mapDispatchToProps = {
   addCard: addCardRequest,
-  deleteCard,
+  deleteCard: deleteCardRequest,
   showDetails,
   getCurrency: getCurrencyRequest,
 };
 
 SearchContainer.propTypes = {
   searchViewData: PropTypes.object,
+  addCard: PropTypes.func,
+  deleteCard: PropTypes.func,
+  showDetails: PropTypes.func,
+  getCurrency: PropTypes.func,
 };
 
 export default connect(null, mapDispatchToProps)(SearchContainer);

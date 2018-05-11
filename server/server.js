@@ -4,24 +4,26 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const routes = require('../server/routes');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = new express();
 const port = process.env.PORT || 8000;
-console.log('in');
+
 mongoose.Promise = global.Promise;
 
-const mongoConfig = {
+const config = {
   mongoURL: process.env.MONGO_URL || 'mongodb://localhost:27017/nbp',
   port: process.env.PORT || 8000,
 };
 
-mongoose.connect(mongoConfig.mongoURL, (error) => {
+mongoose.connect(config.mongoURL, (error) => {
   if (error) {
     console.error('Please make sure Mongodb is installed and running!');
     throw error;
   }
 });
 
+app.use(cors());
 app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));

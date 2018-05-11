@@ -1,4 +1,4 @@
-import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN_IN_AND_OUT, REGISTER_USER } from './Actions';
+import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS, SEARCH_INPUT_ERROR, DETAIL_INPUT_ERROR } from './Actions';
 
 const initialState = {
   cards: [],
@@ -10,7 +10,8 @@ const initialState = {
   detailsInputError: false,
   detailsInputErrorMessage: '',
   signedIn: false,
-  users: [{name: 'ABC', pass: '123'}, {name: 'QWE', pass: '321'}],
+  userSignedIn: '',
+  users: [],
   signingError: false,
   signingErrorMessage: '',
 }
@@ -30,9 +31,8 @@ function prepareDataForChart(dataFromApi) {
 export default function currencies(state = initialState, action) {
   switch (action.type) {
     case ADD_CARD: {
-      const newCard = { ...action.card, id: action.id };
-      const updatedCards = state.cards.concat(newCard);
-      return { ...state, cards: updatedCards };
+      const updateCards = state.cards.concat(action.card);
+      return { ...state, cards: updateCards };
     }
 
     case DELETE_CARD: {
@@ -47,58 +47,45 @@ export default function currencies(state = initialState, action) {
     case GET_CURRENCY: {
       return { ...state, 
         temporaryCard: action.temporaryCard, 
-        searchError: action.searchError, 
-        searchErrorMessage: action.searchErrorMessage 
+        searchError: false,
+        searchErrorMessage: '',
       };
     }
 
-    case GET_INPUTED_NUMBER_OF_LAST_RATES: {
-      if (action.lastRates.rates) {
-        return { ...state,
-          lastRates: prepareDataForChart(action.lastRates),
-          detailsInputError: action.detailsInputError,
-          detailsInputErrorMessage: action.detailsInputErrorMessage,
-        };
-      } else {
-        return { ...state,
-          lastRates: [],
-          detailsInputError: action.detailsInputError,
-          detailsInputErrorMessage: action.detailsInputErrorMessage,
-        };
-      }
-      
+    case SEARCH_INPUT_ERROR: {
+      return { ...state, temporaryCard: null, searchError: true, searchErrorMessage: action.searchErrorMessage}
     }
 
-    case SIGN_IN_AND_OUT: {
-      if (action.isSigningIn) {
-        const user = state.users.find(user => user.name === action.userName);
-        if (user) {
-          if (user.pass === action.pass) {
-            return { ...state, signedIn: true, signingError: false, signingErrorMessage: '', };
-          } else {
-            return { ...state, signingError: true, signingErrorMessage: 'Niepoprawne Hasło', };
-          }
-        } else {
-          return { ...state, signingError: true, signingErrorMessage: 'Brak takiego użytkownika', };
-        }
-      } else {
+    case DETAIL_INPUT_ERROR: {
+      return { ...state, lastRates: [], detailsInputError: true, detailsInputErrorMessage: action.detailsInputErrorMessage };
+    }
+
+    case GET_INPUTED_NUMBER_OF_LAST_RATES: {
+      return { ...state,
+        lastRates: prepareDataForChart(action.lastRates),
+        detailsInputError: false,
+        detailsInputErrorMessage: '',
+      };
+    }
+
+    case SIGN_ERROR: {
+      return { ...state, signingError: true, signingErrorMessage: action.signingErrorMessage };
+    }
+
+    case SIGN: {
+      if (action.isSignedIn) {
         return { ...initialState, users: state.users };
+      } else {
+        return { ...initialState, signedIn: true, userSignedIn: action.user.userName, cards: action.user.cards, users: state.users };
       }
     }
 
     case REGISTER_USER: {
-      const user = state.users.find(user => user.name === action.userName);
-      if (user) {
-        return { ...state, signingError: true, signingErrorMessage: 'Użytkownik już istnieje' };
-      } else {
-        if (action.pass !== action.repeatPass) {
-          return { ...state, signingError: true, signingErrorMessage: 'Hasło nie pasuje do powtórzonego hasła' };
-        } else {
-          const newUsersArray = state.users.concat({ name: action.userName, pass: action.pass })
-          return { ...state, signedIn: true, users: newUsersArray, signingError: false, signingErrorMessage: '' };
-        }
-      }
-      
+      return { ...state, signedIn: true, userSignedIn: action.userName, users: state.users };
+    }
+
+    case POPULATE_USERS: {
+      return { ...state, users: action.users.users };
     }
 
     default: {

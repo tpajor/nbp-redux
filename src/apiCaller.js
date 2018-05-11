@@ -1,8 +1,8 @@
 import fetch from 'isomorphic-fetch';
 
-const callApi = async (endpoint, method = 'get', body) => {
-  return fetch(`localhost:8000/api/${endpoint}`, {
-    headers: {'constent-type': 'application/json'},
+export default function callApi(endpoint, method = 'get', body) {
+  return fetch(`http://localhost:8000/api/${endpoint}`, {
+    headers: { 'content-type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:3000' },
     method,
     body: JSON.stringify(body),
   })
@@ -11,13 +11,11 @@ const callApi = async (endpoint, method = 'get', body) => {
     if (!response.ok) {
       return Promise.reject(json);
     }
-    console.log('reject');
+
     return json;
   })
   .then(
     response => response,
     error => error
   );
-};
-
-export default callApi;
+}

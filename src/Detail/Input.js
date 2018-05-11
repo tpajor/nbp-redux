@@ -16,13 +16,13 @@ export default class Input extends React.Component {
 
   render() {
     const { numberOfData } = this.state;
-    const { detailsInputError, detailsInputErrorMessage } = this.props;
+    const { detailsInputError, detailsInputErrorMessage, currencyCodeToViewInDetail } = this.props;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-2 Input'}>
           <input className="form-control-plaintext"
             type="text" 
-            value={this.props.currencyCodeToViewInDetail.toUpperCase()}
+            value={currencyCodeToViewInDetail.toUpperCase()}
             readOnly
           />
         </div>
@@ -38,7 +38,7 @@ export default class Input extends React.Component {
             ''
           }
         </div>
-        <button type="submit" className={'btn btn-primary col-4 SearchButton'} disabled={this.props.currencyCodeToViewInDetail === ''}>Pokaż</button>
+        <button type="submit" className={'btn btn-primary col-4 SearchButton'} disabled={currencyCodeToViewInDetail === ''}>Pokaż</button>
       </form> 
     );
   }

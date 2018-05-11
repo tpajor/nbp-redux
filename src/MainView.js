@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import SearchContainer from './Search/SearchContainer';
 import DetailContainer from './Detail/DetailContainer';
 
 import './MainView.css';
 
-const MainView = (props) => {
+const MainView = ({ searchViewData, detailViewData }) => {
   return (
     <div className={'row MainView'}>
-      <SearchContainer searchViewData={props.searchViewData}/>
-      <DetailContainer detailViewData={props.detailViewData}/>
+      <SearchContainer searchViewData={searchViewData}/>
+      <DetailContainer detailViewData={detailViewData}/>
     </div>
   );
 };
@@ -21,6 +22,8 @@ const mapStateToProps = (state) => ({
     temporaryCard: state.temporaryCard,
     searchError: state.searchError,
     searchErrorMessage: state.searchErrorMessage,
+    signedIn: state.signedIn,
+    userSignedIn: state.userSignedIn,
   },
   detailViewData: {
     currencyCodeToViewInDetail: state.currencyCodeToViewInDetail,
@@ -30,5 +33,10 @@ const mapStateToProps = (state) => ({
     signedIn: state.signedIn,
   },
 });
+
+MainView.propTypes = {
+  searchViewData: PropTypes.object,
+  detailViewData: PropTypes.object,
+};
 
 export default connect(mapStateToProps)(MainView);

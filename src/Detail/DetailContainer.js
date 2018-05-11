@@ -32,11 +32,12 @@ class DetailContainer extends React.Component {
 
   render() {
     const { contWidth } = this.state;
+    const { signInOrOut, getInputedNumberOfLastRates, detailViewData,  } = this.props;
     return (
       <div  className={'col-8 DetailView'}>
         <Clock format={'YYYY-MM-DD HH:mm:ss'} ticking={true} timezone={'Europe/Warsaw'} />
-        {this.props.detailViewData.signedIn ? 
-          <button className="btn btn-primary SignButton" onClick={() => this.props.signInOrOut(false)}>
+        {detailViewData.signedIn ? 
+          <button className="btn btn-primary SignButton" onClick={() => signInOrOut(true)}>
             Wyloguj
           </button> :
           <Link to='/login' className="btn btn-primary SignButton">
@@ -44,12 +45,12 @@ class DetailContainer extends React.Component {
           </Link>
         }
         <div id={'Chart'} className={'Chart'}>
-          <Input currencyCodeToViewInDetail={this.props.detailViewData.currencyCodeToViewInDetail}
-            getInputedNumberOfLastRates={this.props.getInputedNumberOfLastRates}
-            detailsInputError={this.props.detailViewData.detailsInputError}
-            detailsInputErrorMessage={this.props.detailViewData.detailsInputErrorMessage}
+          <Input currencyCodeToViewInDetail={detailViewData.currencyCodeToViewInDetail}
+            getInputedNumberOfLastRates={getInputedNumberOfLastRates}
+            detailsInputError={detailViewData.detailsInputError}
+            detailsInputErrorMessage={detailViewData.detailsInputErrorMessage}
           />
-          <Chart dataToPlot={this.props.detailViewData.lastRates}
+          <Chart dataToPlot={detailViewData.lastRates}
             contWidth={contWidth}
           />
         </div>
@@ -65,6 +66,8 @@ const mapDispatchToProps = {
 
 DetailContainer.propTypes = {
   detailViewData: PropTypes.object,
+  getInputedNumberOfLastRates: PropTypes.func,
+  signInOrOut: PropTypes.func,
 };
 
 export default connect(null, mapDispatchToProps)(DetailContainer);

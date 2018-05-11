@@ -14,17 +14,19 @@ export default class Search extends React.Component {
   }
   
   render() {
+    const { searchError, searchErrorMessage } = this.props;
+    const { currencyCode } = this.state;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-8 Form'}>
-          <input className={`form-control  ${this.props.searchError ? 'is-invalid' : ''}`}
+          <input className={`form-control  ${searchError ? 'is-invalid' : ''}`}
             type="text" 
-            value={this.state.currencyCode}
+            value={currencyCode}
             onChange={event => this.setState({ currencyCode: event.target.value })}
             placeholder="Wpisz kod waluty"
           />
-          {this.props.searchError ?
-            <p style={{ color: 'red' }}>{this.props.searchErrorMessage}</p> :
+          {searchError ?
+            <p style={{ color: 'red' }}>{searchErrorMessage}</p> :
             ''
           }
         </div>
