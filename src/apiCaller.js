@@ -1,7 +1,9 @@
 import fetch from 'isomorphic-fetch';
 
 export default function callApi(endpoint, method = 'get', body) {
-  return fetch(`http://localhost:8000/api/${endpoint}`, {
+  console.log('!', process.env.PORT);
+  const port = process.env.PORT || 8000;
+  return fetch(`https://localhost:${port}/api/${endpoint}`, {
     headers: { 'content-type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:3000' },
     method,
     body: JSON.stringify(body),

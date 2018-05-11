@@ -180,7 +180,6 @@ export function registerUser(userName) {
 
 export function registerUserRequest(userName, pass, repeatPass, users) {
   return (dispatch) => {
-    console.log('!', typeof users, '$', users)
     const user = users.find(user => user.userName === userName);
     if (user) {
       return dispatch(signError('Użytkownik już istnieje'));
