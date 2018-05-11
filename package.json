@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start-front": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
@@ -33,8 +33,8 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src src/ -o src/ --watch --recursive",
     "proxy": "http://localhost:8000/",
-    "server": "cd server && nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\""
+    "start": "cd server && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start-front\""
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
