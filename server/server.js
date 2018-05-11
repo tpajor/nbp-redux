@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = new express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 mongoose.Promise = global.Promise;
 const config = {
