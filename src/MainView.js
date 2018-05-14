@@ -21,11 +21,11 @@ const mapStateToProps = (state) => ({
     cards: state.cards,
     temporaryCard: state.temporaryCard,
     searchError: state.searchError,
-    searchErrorMessage: state.searchErrorMessage,
     signedIn: state.signedIn,
     userSignedIn: state.userSignedIn,
     addCardError: state.addCardError,
     addCardErrorMessage: state.addCardErrorMessage,
+    currenciesTable: state.currenciesTable,
   },
   detailViewData: {
     currencyCodeToViewInDetail: state.currencyCodeToViewInDetail,

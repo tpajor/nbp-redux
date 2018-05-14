@@ -1,7 +1,8 @@
 import fetch from 'isomorphic-fetch';
 
 export default function callApi(endpoint, method = 'get', body) {
-  const port = process.env.PORT || 8000;
+  //https://nbpredux.herokuapp.com/api/${endpoint}
+  //http://localhost:8000/api/${endpoint}
   return fetch(`https://nbpredux.herokuapp.com/api/${endpoint}`, {
     headers: { 'content-type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:3000' },
     method,

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest } from '../Actions';
+import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest, getCurrenciesTableRequest } from '../Actions';
 
 import Search from './Search';
 import Card from './Card';
@@ -10,12 +10,13 @@ import CardList from './CardList';
 
 import './SearchContainer.css';
 
-const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard }) => {
+const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard, getCurrenciesTable }) => {
   return (
     <div className={'col-4 SearchView'}>
       <Search getCurrency={getCurrency}
         searchError={searchViewData.searchError}
-        searchErrorMessage={searchViewData.searchErrorMessage}
+        getCurrenciesTable={getCurrenciesTable}
+        currenciesTable={searchViewData.currenciesTable}
       />
       {(searchViewData.temporaryCard !== null) ?
         <Card cardData={searchViewData.temporaryCard}
@@ -50,6 +51,7 @@ const mapDispatchToProps = {
   deleteCard: deleteCardRequest,
   showDetails,
   getCurrency: getCurrencyRequest,
+  getCurrenciesTable :getCurrenciesTableRequest,
 };
 
 SearchContainer.propTypes = {
@@ -58,6 +60,7 @@ SearchContainer.propTypes = {
   deleteCard: PropTypes.func,
   showDetails: PropTypes.func,
   getCurrency: PropTypes.func,
+  getCurrenciesTable: PropTypes.func,
 };
 
 export default connect(null, mapDispatchToProps)(SearchContainer);

@@ -14,6 +14,7 @@ export const SEARCH_INPUT_ERROR = 'SEARCH_INPUT_ERROR';
 export const DETAIL_INPUT_ERROR = 'DETAIL_INPUT_ERROR';
 export const SIGN_ERROR = 'SIGN_IN_ERROR';
 export const ADD_CARD_ERROR = 'ADD_CARD_ERROR';
+export const GET_CURRENCIES_TABLE = 'GET_CURRENCIES_TABLE';
 
 export function addCard(card) {
   return {
@@ -84,24 +85,18 @@ export function getCurrency(card) {
 export function searchInputError(searchErrorMessage) {
   return {
     type: SEARCH_INPUT_ERROR,
-    searchErrorMessage,
   };
 }
 
-
 export function getCurrencyRequest(currencyCode) {
   return (dispatch) => {
-    if (currencyCode.length > 3 || currencyCode.length < 3) {
-      dispatch(searchInputError('Wpisz trzyliterowy kod waluty, np. "USD", "chf"'));
-    } else {
-      axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/today/`)
-        .then(res => {
-          dispatch(getCurrency(res.data));
-        })
-        .catch(() => {
-          dispatch(searchInputError('Brak notowań waluty lub nieprawidłowy kod waluty'));
-        });
-    }
+    return axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/today/`)
+      .then(res => {
+        dispatch(getCurrency(res.data));
+      })
+      .catch(() => {
+        dispatch(searchInputError());
+      });
   }
 }
 
@@ -208,5 +203,21 @@ export function fetchUsers() {
     return callApi('user').then(res => {
       dispatch(populateUsers(res));
     })
+  }
+}
+
+export function getCurrenciesTable(table) {
+  return {
+    type: GET_CURRENCIES_TABLE,
+    table,
+  };
+}
+
+export function getCurrenciesTableRequest() {
+  return (dispatch) => {
+    return axios.get(`http://api.nbp.pl/api/exchangerates/tables/c/today/`)
+     .then(res => {
+       dispatch(getCurrenciesTable(res));
+     })
   }
 }

@@ -1,11 +1,10 @@
-import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS, SEARCH_INPUT_ERROR, DETAIL_INPUT_ERROR, ADD_CARD_ERROR } from './Actions';
+import { ADD_CARD, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, GET_INPUTED_NUMBER_OF_LAST_RATES, SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS, SEARCH_INPUT_ERROR, DETAIL_INPUT_ERROR, ADD_CARD_ERROR, GET_CURRENCIES_TABLE } from './Actions';
 
 const initialState = {
   cards: [],
   currencyCodeToViewInDetail: '',
   temporaryCard: null,
   searchError: false,
-  searchErrorMessage: '',
   lastRates: [],
   detailsInputError: false,
   detailsInputErrorMessage: '',
@@ -16,6 +15,7 @@ const initialState = {
   signingErrorMessage: '',
   addCardError: false,
   addCardErrorMessage: '',
+  currenciesTable: [],
 }
 
 function normalizeDataForChart(data, i) {
@@ -54,12 +54,11 @@ export default function currencies(state = initialState, action) {
       return { ...state, 
         temporaryCard: action.temporaryCard, 
         searchError: false,
-        searchErrorMessage: '',
       };
     }
 
     case SEARCH_INPUT_ERROR: {
-      return { ...state, temporaryCard: null, searchError: true, searchErrorMessage: action.searchErrorMessage}
+      return { ...state, temporaryCard: null, searchError: true }
     }
 
     case DETAIL_INPUT_ERROR: {
@@ -95,6 +94,11 @@ export default function currencies(state = initialState, action) {
         return { ...state, users: action.users.users };
       }
       return { ...state };
+    }
+
+    case GET_CURRENCIES_TABLE: {
+      const newCurrenciesTable = action.table.data[0].rates.map(currency => currency.code);
+      return { ...state, currenciesTable: newCurrenciesTable };
     }
 
     default: {
