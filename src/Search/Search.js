@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { debounce } from "throttle-debounce";
+import { throttle } from "throttle-debounce";
 
 import './Search.css';
 
@@ -11,8 +11,10 @@ export default class Search extends React.Component {
       currencyCode: '',
       autocomplete: [],
       inputError: false,
+      activeItemPosition: 0,
+      hover: false,
     };
-    this.setAutocompleteDebounce = debounce(500, this.setAutocomplete);
+    this.setAutocompleteDebounce = throttle(200, this.setAutocomplete);
   }
   
 
@@ -23,7 +25,7 @@ export default class Search extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const listOfMatchingCurrencies = this.props.currenciesTable.filter(currency => currency === this.state.currencyCode.toUpperCase());
-    if (listOfMatchingCurrencies.length > 0) {
+    if (listOfMatchingCurrencies.length === 1) {
       this.setState({ autocomplete: [], inputError: false });
       this.props.getCurrency(this.state.currencyCode.toLowerCase());
     } else {
@@ -35,12 +37,12 @@ export default class Search extends React.Component {
     const listOfAutocompleteMatchingInput = this.props.currenciesTable.filter(currency => currency.indexOf(input.toUpperCase()) >= 0);
     if (listOfAutocompleteMatchingInput.length > 0) {
       if (input.length > 0) {
-      this.setState({ autocomplete: listOfAutocompleteMatchingInput, inputError: false });
+        this.setState({ autocomplete: listOfAutocompleteMatchingInput, inputError: false, activeItemPosition: 0 });
       } else {
-        this.setState({ autocomplete: [], inputError: false})
+        this.setState({ autocomplete: [], inputError: false, activeItemPosition: 0 })
       }
     } else {
-      this.setState({ autocomplete: [], inputError: true });
+      this.setState({ autocomplete: [], inputError: true, activeItemPosition: 0 });
     }
   }
 
@@ -50,14 +52,44 @@ export default class Search extends React.Component {
     });
   }
 
+  handleKeyDown = event => {
+    if (event.keyCode === 38 && this.state.activeItemPosition > 0) {
+      this.setState(prevState => ({ activeItemPosition: prevState.activeItemPosition - 1 }));
+    } else if (event.keyCode === 40 && this.state.activeItemPosition < this.state.autocomplete.length - 1) {
+      this.setState(prevState => ({ activeItemPosition: prevState.activeItemPosition + 1 }));
+    } else if (event.keyCode === 13) {
+      if (this.state.currencyCode === this.state.autocomplete[0] && this.state.autocomplete.length === 1) {
+        this.handleSubmit(event);
+      } else if (this.state.autocomplete.length > 0) {
+        const chosenCurrency = this.state.autocomplete[this.state.activeItemPosition];
+        this.setState({ currencyCode: chosenCurrency, autocomplete: [].concat(chosenCurrency) })
+      }
+    }
+  }
+
   handleClick = (event, currency) => {
     event.preventDefault();
     this.setState({ currencyCode: currency, autocomplete: this.state.autocomplete.filter(currencyToMatch => currencyToMatch === currency) })
   }
-  
+
+  handleMouseEnter = event => {
+    event.preventDefault();
+    this.setState({ hover: true });
+  }
+
+  handleMouseLeave = event => {
+    event.preventDefault();
+    this.setState({ hover: false });
+  }
+
+  handleHoverChoice = (event, i) => {
+    event.preventDefault();
+    this.setState({ activeItemPosition: i })
+  }
+
   render() {
     const { searchError } = this.props;
-    const { currencyCode, inputError } = this.state;
+    const { currencyCode, inputError, activeItemPosition, hover } = this.state;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-8 Form'}>
@@ -66,16 +98,17 @@ export default class Search extends React.Component {
             type="text" 
             value={currencyCode}
             onChange={this.handleChange}
+            onKeyDown={this.handleKeyDown}
             placeholder="Wpisz kod waluty"
           />
           {(this.state.autocomplete.length > 0) ? 
-            <ul className="CurrencyList">
-              {this.state.autocomplete.map((currency, i) => <li key={i} className="Currency">
-                <button onClick={event => this.handleClick(event, currency)} className="CurrencyButton">
+            <ol className="CurrencyList" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+              {this.state.autocomplete.map((currency, i) => <li key={i} className={'Currency'} onMouseEnter={event => this.handleHoverChoice(event, i)}>
+                <button onClick={event => this.handleClick(event, currency)} className={`CurrencyButton ${(activeItemPosition === i && !hover) ? 'active' : ''}`}>
                   <p className="CurrencyText">{currency}</p>
                 </button>
               </li>)}
-            </ul>: 
+            </ol>: 
             ''
           }
           {(inputError) ?
