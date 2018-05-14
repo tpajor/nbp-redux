@@ -34,12 +34,12 @@
     "start-front": "SET REACT_APP_NODE_ENV=development && npm-run-all -p watch-css start-js",
     "build-css": "node-sass-chokidar src/ -o src/",
     "build-js": "react-scripts build",
-    "postinstall": "SET REACT_APP_NODE_ENV=production npm-run-all build-css build-js",
+    "postinstall": "REACT_APP_NODE_ENV=production npm-run-all build-css build-js",
     "devbuild": "SET REACT_APP_NODE_ENV=development && npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "proxy": "http://localhost:8000/",
-    "start": "SET NODE_ENV=production && cd server && node server.js",
+    "start": "NODE_ENV=production && cd server && node server.js",
     "server": "SET NODE_ENV=development && cd server && nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start-front\""
   }
