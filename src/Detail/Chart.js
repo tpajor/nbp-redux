@@ -3,6 +3,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 import PropTypes from 'prop-types';
 
 const Chart = ({ dataToPlot, contWidth }) => {
+  const min = Math.min( ...dataToPlot ) * 0.9;
+  const max = Math.max( ...dataToPlot ) * 1.1;
   return(
     <div>
       <h3 className="text-center">
@@ -13,7 +15,7 @@ const Chart = ({ dataToPlot, contWidth }) => {
       </h3>
       <LineChart width={contWidth} height={contWidth * 0.6} data={dataToPlot}>
         <XAxis dataKey="name" hide={true} />
-        <YAxis domain={[dataMin => ((dataMin * 0.99).toFixed(2)), dataMax => ((dataMax * 1.01).toFixed(2))]} />
+        <YAxis domain={['auto', 'auto']} />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
