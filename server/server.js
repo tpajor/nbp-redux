@@ -8,14 +8,14 @@ const cors = require('cors');
 
 const app = new express();
 const port = process.env.PORT || 8000;
-
 mongoose.Promise = global.Promise;
-const config = {
-  mongoURL: process.env.MONGO_URL || 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp',
-};
-//mongodb://localhost:27017/nbp
-//mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp
-mongoose.connect(config.mongoURL).catch(error => {
+
+let mongoURL = 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp';
+if (process.env.NODE_ENV.trim() === "development") {
+  mongoURL = 'mongodb://localhost:27017/nbp';
+}
+
+mongoose.connect(mongoURL).catch(error => {
   if (error) {
     console.error('Please make sure Mongodb is installed and running!');
     throw error;
