@@ -215,7 +215,7 @@ export function getCurrenciesTable(table) {
 
 export function getCurrenciesTableRequest() {
   return (dispatch) => {
-    return axios.get(`http://api.nbp.pl/api/exchangerates/tables/c/today/`)
+    return axios.get(`https://api.nbp.pl/api/exchangerates/tables/c/today/`)
      .then(res => {
        dispatch(getCurrenciesTable(res));
      })
