@@ -22,5 +22,5 @@ yarn-error.log*
 
 README.md
 .eslintrc
-
+.env
 src/**/*.css
