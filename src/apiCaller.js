@@ -1,9 +1,8 @@
 import fetch from 'isomorphic-fetch';
 
 export default function callApi(endpoint, method = 'get', body) {
-  console.log(process.env);
   let url = `https://nbpredux.herokuapp.com/api/${endpoint}`;
-  if (process.env.REACT_APP_NODE_ENV.trim() === 'development') { 
+  if (process.env.REACT_APP_NODE_ENV === 'development') { 
     url = `http://localhost:8000/api/${endpoint}`;
   };
   return fetch(url, {

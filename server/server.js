@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config({path: '../.env'});
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
@@ -6,12 +8,12 @@ const routes = require('../server/routes');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
 const app = new express();
 const port = process.env.PORT || 8000;
 mongoose.Promise = global.Promise;
-
 let mongoURL = 'mongodb://estewez:obojetnie8@ds219000.mlab.com:19000/nbp';
-if (process.env.NODE_ENV.trim() === "development") {
+if (process.env.NODE_ENV === "development") {
   mongoURL = 'mongodb://localhost:27017/nbp';
 }
 
