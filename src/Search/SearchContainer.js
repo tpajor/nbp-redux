@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest, getCurrenciesTableRequest } from '../Actions';
+import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest, getCurrenciesTableRequest } from './SearchActions';
 
 import Search from './Search';
 import Card from './Card';

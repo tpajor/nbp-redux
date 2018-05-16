@@ -18,21 +18,21 @@ const MainView = ({ searchViewData, detailViewData }) => {
 
 const mapStateToProps = (state) => ({
   searchViewData: {
-    cards: state.cards,
-    temporaryCard: state.temporaryCard,
-    searchError: state.searchError,
-    signedIn: state.signedIn,
-    userSignedIn: state.userSignedIn,
-    addCardError: state.addCardError,
-    addCardErrorMessage: state.addCardErrorMessage,
-    currenciesTable: state.currenciesTable,
+    cards: state.search.cards,
+    temporaryCard: state.search.temporaryCard,
+    searchError: state.search.searchError,
+    signedIn: state.login.signedIn,
+    userSignedIn: state.login.userSignedIn,
+    addCardError: state.search.addCardError,
+    addCardErrorMessage: state.search.addCardErrorMessage,
+    currenciesTable: state.search.currenciesTable,
   },
   detailViewData: {
-    currencyCodeToViewInDetail: state.currencyCodeToViewInDetail,
-    lastRates: state.lastRates,
-    detailsInputError: state.detailsInputError,
-    detailsInputErrorMessage: state.detailsInputErrorMessage,
-    signedIn: state.signedIn,
+    currencyCodeToViewInDetail: state.search.currencyCodeToViewInDetail,
+    lastRates: state.detail.lastRates,
+    detailsInputError: state.detail.detailsInputError,
+    detailsInputErrorMessage: state.detail.detailsInputErrorMessage,
+    signedIn: state.login.signedIn,
   },
 });
 

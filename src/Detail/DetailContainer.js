@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { getInputedNumberOfLastRatesRequest, signInOrOut } from '../Actions';
+import { getInputedNumberOfLastRatesRequest } from './DetailActions';
+import { signInOrOut } from '../Login/LoginActions';
 
 import Input from './Input';
 import Chart from './Chart';

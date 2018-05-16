@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { signInOrOut, registerUserRequest } from '../Actions';
+import { signInOrOut, registerUserRequest } from './LoginActions';
 
 import './Login.css';
 
@@ -83,10 +83,10 @@ class Login extends React.Component {
 };
 
 const mapStateToProps = (state) => ({
-  signingError: state.signingError,
-  signingErrorMessage: state.signingErrorMessage,
-  signedIn: state.signedIn,
-  users: state.users,
+  signingError: state.login.signingError,
+  signingErrorMessage: state.login.signingErrorMessage,
+  signedIn: state.login.signedIn,
+  users: state.login.users,
 });
 
 const mapDispatchToProps = {

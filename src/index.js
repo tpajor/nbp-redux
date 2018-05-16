@@ -4,13 +4,13 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import currencies from './Reducer';
+import rootReducer from './Store/rootReducer';
 
 import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
-  currencies,
+  rootReducer,
   composeEnhancers(applyMiddleware(thunk))
 );
 

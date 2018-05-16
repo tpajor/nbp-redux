@@ -4,7 +4,7 @@ import { Route } from 'react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { fetchUsers } from './Actions';
+import { fetchUsers } from './Login/LoginActions';
 
 import MainView from './MainView';
 import Login from './Login/Login';
