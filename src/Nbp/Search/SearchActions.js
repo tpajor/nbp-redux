@@ -1,8 +1,8 @@
 import uuid from 'uuid';
 import axios from 'axios';
 
-import callApi from '../Services/apiCaller';
-import { fetchUsers } from '../Login/LoginActions';
+import callApi from '../../Services/apiCaller';
+import { fetchUsers } from '../../Login/LoginActions';
 
 export const ADD_CARD = 'ADD_CARD';
 export const ADD_CARD_ERROR = 'ADD_CARD_ERROR';

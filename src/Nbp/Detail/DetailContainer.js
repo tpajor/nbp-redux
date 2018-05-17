@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { getInputedNumberOfLastRatesRequest } from './DetailActions';
-import { signInOrOut } from '../Login/LoginActions';
+import { signInOrOut } from '../../Login/LoginActions';
 
 import Input from './Input';
 import Chart from './Chart';
@@ -38,9 +38,9 @@ class DetailContainer extends React.Component {
       <div  className={'col-8 DetailView'}>
         <Clock format={'YYYY-MM-DD HH:mm:ss'} ticking={true} timezone={'Europe/Warsaw'} />
         {detailViewData.signedIn ? 
-          <button className="btn btn-primary SignButton" onClick={() => signInOrOut(true)}>
+          <Link to='/login' className="btn btn-primary SignButton" onClick={() => signInOrOut(true)}>
             Wyloguj
-          </button> :
+          </Link> :
           <Link to='/login' className="btn btn-primary SignButton">
             Zaloguj
           </Link>

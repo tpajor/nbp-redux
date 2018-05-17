@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-import detail from '../Detail/DetailReducer';
+import detail from '../Nbp/Detail/DetailReducer';
 import login from '../Login/LoginReducer';
-import search from '../Search/SearchReducer';
+import search from '../Nbp/Search/SearchReducer';
 
 export default combineReducers({
   detail,

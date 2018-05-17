@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { fetchUsers } from './Login/LoginActions';
-
-import MainView from './MainView';
+import MainView from './Nbp/MainView';
 import Login from './Login/Login';
 
 class App extends React.Component {

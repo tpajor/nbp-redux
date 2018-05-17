@@ -16,7 +16,7 @@ export default class Input extends React.Component {
 
   render() {
     const { numberOfData } = this.state;
-    const { detailsInputError, detailsInputErrorMessage, currencyCodeToViewInDetail } = this.props;
+    const { detailsInputError, detailsInputErrorMessage, currencyCodeToViewInDetail, input } = this.props;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-2 Input'}>
@@ -29,7 +29,7 @@ export default class Input extends React.Component {
         <div className={'form-group col-6 Form'}>
           <input className={`form-control ${detailsInputError ? 'is-invalid': ''}`}
             type="text" 
-            value={numberOfData}
+            value={currencyCodeToViewInDetail ? numberOfData : ''}
             onChange={event => this.setState({ numberOfData: event.target.value })}
             placeholder="Wpisz liczbę ostatnich kursów"
           />
@@ -38,7 +38,7 @@ export default class Input extends React.Component {
             ''
           }
         </div>
-        <button type="submit" className={'btn btn-primary col-4 SearchButton'} disabled={currencyCodeToViewInDetail === ''}>Pokaż</button>
+        <button type="submit" className={'btn btn-primary col-4 InputButton'} disabled={currencyCodeToViewInDetail === ''}>Pokaż</button>
       </form> 
     );
   }

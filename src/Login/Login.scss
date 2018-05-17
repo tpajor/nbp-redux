@@ -1,4 +1,5 @@
 .LoginForm {
+  position: relative;
   text-align: center;
   height: 100%;
   width: 40vw;
@@ -9,4 +10,21 @@
 
 .LoginButton {
   display: inline-block;
+}
+
+.LinkToNbp {
+  text-decoration: none;
+  position: fixed;
+  color: white;
+  width: 27.5vw;
+  margin-left: 36.25vw;
+  padding: 3vh 0;
+  background-color: #888;
+  left: 0;
+  top: 0;
+  font-size: 1.25em;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
 }

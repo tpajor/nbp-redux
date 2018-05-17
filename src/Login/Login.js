@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { signInOrOut, registerUserRequest } from './LoginActions';
 
@@ -34,6 +35,9 @@ class Login extends React.Component {
     }
     return (
       <div className={'LoginForm'}>
+        <Link to="/" className="LinkToNbp">
+          Przejdź do kursów walut bez logowania
+        </Link>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input className={`form-control ${signingError ? 'is-invalid': ''}`}

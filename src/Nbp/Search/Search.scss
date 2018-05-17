@@ -4,11 +4,14 @@
   vertical-align: middle;
   width: 100%;
   position: relative;
+
+  .FormInput {
+    margin: 0 0 20px 0;
+  }
 }
 
 .SearchButton {
   position: absolute;
-  margin-top: 20px;
 }
 
 .CurrencyList {

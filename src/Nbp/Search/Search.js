@@ -92,11 +92,12 @@ export default class Search extends React.Component {
     const { currencyCode, inputError, activeItemPosition, hover } = this.state;
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
-        <div className={'form-group col-8 Form'}>
+        <div className={'form-group col-8 Form FormInput'}>
           <input className={`form-control  ${(inputError || searchError) ? 'is-invalid' : ''}`}
             onFocus={this.handleFocus}
             type="text" 
             value={currencyCode}
+            onBlur={this.handleBlur}
             onChange={this.handleChange}
             onKeyDown={this.handleKeyDown}
             placeholder="Wpisz kod waluty"

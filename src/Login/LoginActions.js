@@ -1,6 +1,6 @@
 import callApi from '../Services/apiCaller';
-import { populateCards } from '../Search/SearchActions';
-import { resetDetailState } from '../Detail/DetailActions'
+import { populateCards } from '../Nbp/Search/SearchActions';
+import { resetDetailState } from '../Nbp/Detail/DetailActions';
 
 export const SIGN = 'SIGN';
 export const SIGN_ERROR = 'SIGN_IN_ERROR';

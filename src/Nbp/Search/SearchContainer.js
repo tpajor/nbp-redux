@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { addCardRequest, deleteCardRequest, showDetails, getCurrencyRequest, getCurrenciesTableRequest } from './SearchActions';
-
 import Search from './Search';
 import Card from './Card';
 import CardList from './CardList';
@@ -13,6 +12,7 @@ import './SearchContainer.css';
 const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard, getCurrenciesTable }) => {
   return (
     <div className={'col-4 SearchView'}>
+      {searchViewData.userSignedIn ? <h5>{`Witaj, ${searchViewData.userSignedIn}`}</h5> : ''}
       <Search getCurrency={getCurrency}
         searchError={searchViewData.searchError}
         getCurrenciesTable={getCurrenciesTable}
