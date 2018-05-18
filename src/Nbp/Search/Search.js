@@ -17,7 +17,6 @@ export default class Search extends React.Component {
     this.setAutocompleteDebounce = throttle(200, this.setAutocomplete);
   }
   
-
   handleFocus = () => {
     this.props.getCurrenciesTable();
   }

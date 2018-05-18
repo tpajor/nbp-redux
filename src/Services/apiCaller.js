@@ -6,7 +6,7 @@ export default function callApi(endpoint, method = 'get', body) {
     url = `http://localhost:8000/api/${endpoint}`;
   };
   return fetch(url, {
-    headers: { 'content-type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:3000' },
+    headers: { 'content-type': 'application/json' },
     method,
     body: JSON.stringify(body),
   })

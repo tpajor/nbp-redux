@@ -1,6 +1,6 @@
 import { ADD_CARD, ADD_CARD_ERROR, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, SEARCH_INPUT_ERROR, GET_CURRENCIES_TABLE, POPULATE_CARDS } from './SearchActions';
 
-const initialState = {
+export const initialState = {
   cards: [],
   addCardError: false,
   addCardErrorMessage: '',
@@ -42,7 +42,7 @@ export default function search(state = initialState, action) {
     }
 
     case GET_CURRENCIES_TABLE: {
-      const newCurrenciesTable = action.table.data[0].rates.map(currency => currency.code);
+      const newCurrenciesTable = action.table[0].rates.map(currency => currency.code);
       return { ...state, currenciesTable: newCurrenciesTable };
     }
 

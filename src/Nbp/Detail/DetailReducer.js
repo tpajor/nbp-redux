@@ -1,12 +1,12 @@
 import { GET_INPUTED_NUMBER_OF_LAST_RATES, DETAIL_INPUT_ERROR, RESET } from './DetailActions';
 
-const initialState = {
+export const initialState = {
   lastRates: [],
   detailsInputError: false,
   detailsInputErrorMessage: '',
 }
 
-function normalizeDataForChart(data = initialState, i) {
+function normalizeDataForChart(data, i) {
   const dataNormalizedForChart = {};
   dataNormalizedForChart.name = data.effectiveDate;
   dataNormalizedForChart.kupno = data.ask;

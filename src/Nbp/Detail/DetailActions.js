@@ -25,7 +25,7 @@ export function getInputedNumberOfLastRatesRequest(numberOfRates, currencyCode) 
     } else if (numberOfRates > 250 || numberOfRates <= 0) {
       dispatch(detailInputError('Maksymalna liczba notowań to 250'));
     } else {
-      axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/last/${numberOfRates}/`)
+      return axios.get(`https://api.nbp.pl/api/exchangerates/rates/c/${currencyCode}/last/${numberOfRates}/`)
         .then(res => {
           dispatch(getInputedNumberOfLastRates(res.data));
         })

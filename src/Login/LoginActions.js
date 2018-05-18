@@ -60,7 +60,7 @@ export function registerUserRequest(userName, pass, repeatPass, users) {
     } else {
       if (pass !== repeatPass) {
         return dispatch(signError('Hasło nie pasuje do powtórzonego hasła'));
-      } else {
+      } else { 
         return callApi('user', 'post', { userName, pass, repeatPass }).then(res => {
           dispatch(fetchUsers());
           dispatch(registerUser(userName));

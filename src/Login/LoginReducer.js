@@ -1,6 +1,6 @@
 import { SIGN, SIGN_ERROR, REGISTER_USER, POPULATE_USERS } from './LoginActions';
 
-const initialState = {
+export const initialState = {
   signingError: false,
   signingErrorMessage: '',
   signedIn: false,
@@ -23,7 +23,7 @@ export default function login(state = initialState, action) {
     }
 
     case REGISTER_USER: {
-      return { ...state, signedIn: true, userSignedIn: action.userName, users: state.users };
+      return { ...initialState, signedIn: true, userSignedIn: action.userName, users: state.users };
     }
 
     case POPULATE_USERS: {

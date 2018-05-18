@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.15.0",
     "babel-cli": "^6.26.0",
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
@@ -26,6 +27,7 @@
     "react-scripts": "1.1.4",
     "recharts": "^1.0.0-beta.10",
     "redux": "^4.0.0",
+    "redux-mock-store": "^1.5.1",
     "redux-thunk": "^2.2.0",
     "throttle-debounce": "^1.0.1",
     "uuid": "^3.2.1"
@@ -38,7 +40,8 @@
     "build-js": "react-scripts build",
     "postinstall": "npm-run-all build-css build-js",
     "devbuild": "npm-run-all build-css build-js",
-    "test": "jest",
+    "test": "react-scripts test --env=jsdom",
+    "test-watch": "jest --watch",
     "eject": "react-scripts eject",
     "proxy": "http://localhost:8000/",
     "start": "cd server && node server.js",

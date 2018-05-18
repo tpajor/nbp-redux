@@ -32,14 +32,17 @@ export function addCardRequest(card, userName, isSignedIn, cards) {
     if (cardExists) {
       return dispatch(addCardError());
     } else {
-      const id = uuid.v4();
+      let id = uuid.v4();
+      if (process.env.NODE_ENV === 'test') {
+        id = 'someId';
+      }
       if (isSignedIn) {
         return callApi('card', 'post', { card: { ...card, id }, userName }).then(res => {
           dispatch(addCard({ ...card, id }));
           dispatch(fetchUsers());
         });
       } else {
-        dispatch(addCard({ ...card, id }));
+        return dispatch(addCard({ ...card, id }));
       }
       }
   };
@@ -108,8 +111,8 @@ export function getCurrenciesTableRequest() {
   return (dispatch) => {
     return axios.get(`https://api.nbp.pl/api/exchangerates/tables/c/today/`)
      .then(res => {
-       dispatch(getCurrenciesTable(res));
-     })
+       dispatch(getCurrenciesTable(res.data));
+     });
   }
 }
 
