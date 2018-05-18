@@ -186,7 +186,7 @@ describe('Search components reducer', () => {
     })).toEqual(expectedState);
   });
 
-  it('should handle storing temporary card', () => {
+  it('should handle search input error', () => {
     const card = { id: 'someId', code: 'USD', currency: 'dolar amerykański', rates: { ask: 3.3, bid: 3.4 }};
 
     const expectedState = {
@@ -205,7 +205,7 @@ describe('Search components reducer', () => {
       addCardErrorMessage: '',
       currencyCodeToViewInDetail: '',
       temporaryCard: card,
-      searchError: false,
+      searchError: true,
       currenciesTable: [],
     };
 
@@ -220,7 +220,7 @@ describe('Search components reducer', () => {
     })).toEqual(expectedState);    
   });
 
-  it('should handle storing temporary card', () => {
+  it('should handle storing currencies table for autocomplete', () => {
     const expectedTable = ['usd', 'chf'];
     const table = [{ rates: [{  code: 'usd', ask: 3.4 }, {  code: 'chf', ask: 1.4 }] }];
 
@@ -250,7 +250,7 @@ describe('Search components reducer', () => {
     })).toEqual(expectedState); 
   });
 
-  it('should handle storing temporary card', () => {
+  it('should handle storing passed cards', () => {
     const card = { id: 'someId', code: 'USD', currency: 'dolar amerykański', rates: { ask: 3.3, bid: 3.4 }};
     const card2 = { id: 'someId2', code: 'USD', currency: 'dolar amerykański', rates: { ask: 3.3, bid: 3.4 }};
 
