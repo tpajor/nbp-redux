@@ -34,7 +34,6 @@ ShallowWrapper {
 >
           <input
                     className="form-control "
-                    onBlur={undefined}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
@@ -66,7 +65,6 @@ ShallowWrapper {
           "children": Array [
             <input
               className="form-control "
-              onBlur={undefined}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
@@ -88,7 +86,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "form-control ",
-              "onBlur": undefined,
               "onChange": [Function],
               "onFocus": [Function],
               "onKeyDown": [Function],
@@ -134,7 +131,6 @@ ShallowWrapper {
 >
             <input
                         className="form-control "
-                        onBlur={undefined}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onKeyDown={[Function]}
@@ -166,7 +162,6 @@ ShallowWrapper {
             "children": Array [
               <input
                 className="form-control "
-                onBlur={undefined}
                 onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -188,7 +183,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "className": "form-control ",
-                "onBlur": undefined,
                 "onChange": [Function],
                 "onFocus": [Function],
                 "onKeyDown": [Function],

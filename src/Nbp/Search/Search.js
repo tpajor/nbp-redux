@@ -96,7 +96,6 @@ export default class Search extends React.Component {
             onFocus={this.handleFocus}
             type="text" 
             value={currencyCode}
-            onBlur={this.handleBlur}
             onChange={this.handleChange}
             onKeyDown={this.handleKeyDown}
             placeholder="Wpisz kod waluty"
