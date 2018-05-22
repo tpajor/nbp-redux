@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Search
+    currenciesTable={
+        Array [
+            "usd",
+            "chf",
+            "aud",
+          ]
+    }
+    getCurrenciesTable={[Function]}
+    getCurrency={[Function]}
+    searchError={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="form-group col-8 Form FormInput"
+>
+          <input
+                    className="form-control "
+                    onBlur={undefined}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Wpisz kod waluty"
+                    type="text"
+                    value=""
+          />
+          
+          
+          
+</div>,
+        <button
+          className="btn btn-primary col-4 SearchButton"
+          type="submit"
+>
+          Szukaj
+</button>,
+      ],
+      "className": "Form",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="form-control "
+              onBlur={undefined}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Wpisz kod waluty"
+              type="text"
+              value=""
+/>,
+            "",
+            "",
+            "",
+          ],
+          "className": "form-group col-8 Form FormInput",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "form-control ",
+              "onBlur": undefined,
+              "onChange": [Function],
+              "onFocus": [Function],
+              "onKeyDown": [Function],
+              "placeholder": "Wpisz kod waluty",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "",
+          "",
+          "",
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Szukaj",
+          "className": "btn btn-primary col-4 SearchButton",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Szukaj",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="form-group col-8 Form FormInput"
+>
+            <input
+                        className="form-control "
+                        onBlur={undefined}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Wpisz kod waluty"
+                        type="text"
+                        value=""
+            />
+            
+            
+            
+</div>,
+          <button
+            className="btn btn-primary col-4 SearchButton"
+            type="submit"
+>
+            Szukaj
+</button>,
+        ],
+        "className": "Form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="form-control "
+                onBlur={undefined}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Wpisz kod waluty"
+                type="text"
+                value=""
+/>,
+              "",
+              "",
+              "",
+            ],
+            "className": "form-group col-8 Form FormInput",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "form-control ",
+                "onBlur": undefined,
+                "onChange": [Function],
+                "onFocus": [Function],
+                "onKeyDown": [Function],
+                "placeholder": "Wpisz kod waluty",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "",
+            "",
+            "",
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Szukaj",
+            "className": "btn btn-primary col-4 SearchButton",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Szukaj",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

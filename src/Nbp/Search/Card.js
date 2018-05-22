@@ -19,7 +19,7 @@ const Card = ({ cardData, isTemporary, deleteCard, userSignedIn, signedIn, addCa
         </div>
         <div className={'col-4 CardMainCell Right'}>
           <p className={'CardMainCellText'}>
-          {cardData.rates[0].bid}
+            {cardData.rates[0].bid}
           </p>
           {isTemporary ? 
             '' :

@@ -12,7 +12,7 @@ import Chart from './Chart';
 
 import './DetailContainer.css';
 
-class DetailContainer extends React.Component {
+export class DetailContainer extends React.Component {
   state = { 
     contWidth: 0,
   };

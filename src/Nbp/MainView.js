@@ -7,7 +7,7 @@ import DetailContainer from './Detail/DetailContainer';
 
 import './MainView.css';
 
-const MainView = ({ searchViewData, detailViewData }) => {
+export const MainView = ({ searchViewData, detailViewData }) => {
   return (
     <div className={'row MainView'}>
       <SearchContainer searchViewData={searchViewData}/>

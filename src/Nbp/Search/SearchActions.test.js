@@ -9,6 +9,7 @@ import { ADD_CARD, ADD_CARD_ERROR, DELETE_CARD, SHOW_DETAILS, GET_CURRENCY, SEAR
   getCurrenciesTable, getCurrenciesTableRequest, populateCards } from './SearchActions';
 
 jest.mock('../../Services/apiCaller');
+jest.mock('../../Services/uniqueIdGenerator');
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

@@ -1,0 +1,644 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchContainer component should render correctly 1`] = `
+Object {
+  "enzymeWrapper": ShallowWrapper {
+    "length": 1,
+    Symbol(enzyme.__root__): [Circular],
+    Symbol(enzyme.__unrendered__): <Unknown
+      addCard={[Function]}
+      deleteCard={[Function]}
+      getCurrenciesTable={[Function]}
+      getCurrency={[Function]}
+      searchViewData={
+            Object {
+                  "addCardError": true,
+                  "addCardErrorMessage": "error",
+                  "cards": Array [
+                    Object {
+                      "code": "USD",
+                      "currency": "dolar amerykański",
+                      "id": "someId",
+                      "rates": Array [
+                        Object {
+                          "ask": 3.3,
+                          "bid": 3.4,
+                        },
+                      ],
+                    },
+                    Object {
+                      "code": "USD",
+                      "currency": "dolar amerykański",
+                      "id": "someId2",
+                      "rates": Object {
+                        "ask": 3.3,
+                        "bid": 3.4,
+                      },
+                    },
+                  ],
+                  "currenciesTable": Array [
+                    "usd",
+                    "chf",
+                    "aud",
+                  ],
+                  "searchError": false,
+                  "signedIn": true,
+                  "temporaryCard": Object {
+                    "code": "USD",
+                    "currency": "dolar amerykański",
+                    "id": "someId",
+                    "rates": Array [
+                      Object {
+                        "ask": 3.3,
+                        "bid": 3.4,
+                      },
+                    ],
+                  },
+                  "userSignedIn": "User",
+                }
+      }
+      showDetails={[Function]}
+/>,
+    Symbol(enzyme.__renderer__): Object {
+      "batchedUpdates": [Function],
+      "getNode": [Function],
+      "render": [Function],
+      "simulateEvent": [Function],
+      "unmount": [Function],
+    },
+    Symbol(enzyme.__node__): Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h5>
+            Witaj, User
+</h5>,
+          <Search
+            currenciesTable={
+                        Array [
+                                    "usd",
+                                    "chf",
+                                    "aud",
+                                  ]
+            }
+            getCurrenciesTable={[Function]}
+            getCurrency={[Function]}
+            searchError={false}
+/>,
+          <Card
+            addCard={[Function]}
+            cardData={
+                        Object {
+                                    "code": "USD",
+                                    "currency": "dolar amerykański",
+                                    "id": "someId",
+                                    "rates": Array [
+                                      Object {
+                                        "ask": 3.3,
+                                        "bid": 3.4,
+                                      },
+                                    ],
+                                  }
+            }
+            cards={
+                        Array [
+                                    Object {
+                                      "code": "USD",
+                                      "currency": "dolar amerykański",
+                                      "id": "someId",
+                                      "rates": Array [
+                                        Object {
+                                          "ask": 3.3,
+                                          "bid": 3.4,
+                                        },
+                                      ],
+                                    },
+                                    Object {
+                                      "code": "USD",
+                                      "currency": "dolar amerykański",
+                                      "id": "someId2",
+                                      "rates": Object {
+                                        "ask": 3.3,
+                                        "bid": 3.4,
+                                      },
+                                    },
+                                  ]
+            }
+            isTemporary={true}
+            showDetails={[Function]}
+            signedIn={true}
+            userSignedIn="User"
+/>,
+          <p
+            style={
+                        Object {
+                                    "color": "red",
+                                    "textAlign": "center",
+                                  }
+            }
+>
+            <br />
+            error
+</p>,
+          <CardList
+            cards={
+                        Array [
+                                    Object {
+                                      "code": "USD",
+                                      "currency": "dolar amerykański",
+                                      "id": "someId",
+                                      "rates": Array [
+                                        Object {
+                                          "ask": 3.3,
+                                          "bid": 3.4,
+                                        },
+                                      ],
+                                    },
+                                    Object {
+                                      "code": "USD",
+                                      "currency": "dolar amerykański",
+                                      "id": "someId2",
+                                      "rates": Object {
+                                        "ask": 3.3,
+                                        "bid": 3.4,
+                                      },
+                                    },
+                                  ]
+            }
+            deleteCard={[Function]}
+            showDetails={[Function]}
+            signedIn={true}
+            userSignedIn="User"
+/>,
+        ],
+        "className": "col-4 SearchView",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Witaj, User",
+          },
+          "ref": null,
+          "rendered": "Witaj, User",
+          "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "currenciesTable": Array [
+              "usd",
+              "chf",
+              "aud",
+            ],
+            "getCurrenciesTable": [Function],
+            "getCurrency": [Function],
+            "searchError": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addCard": [Function],
+            "cardData": Object {
+              "code": "USD",
+              "currency": "dolar amerykański",
+              "id": "someId",
+              "rates": Array [
+                Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              ],
+            },
+            "cards": Array [
+              Object {
+                "code": "USD",
+                "currency": "dolar amerykański",
+                "id": "someId",
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
+              },
+              Object {
+                "code": "USD",
+                "currency": "dolar amerykański",
+                "id": "someId2",
+                "rates": Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              },
+            ],
+            "isTemporary": true,
+            "showDetails": [Function],
+            "signedIn": true,
+            "userSignedIn": "User",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <br />,
+              "error",
+            ],
+            "style": Object {
+              "color": "red",
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            "error",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cards": Array [
+              Object {
+                "code": "USD",
+                "currency": "dolar amerykański",
+                "id": "someId",
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
+              },
+              Object {
+                "code": "USD",
+                "currency": "dolar amerykański",
+                "id": "someId2",
+                "rates": Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              },
+            ],
+            "deleteCard": [Function],
+            "showDetails": [Function],
+            "signedIn": true,
+            "userSignedIn": "User",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    Symbol(enzyme.__nodes__): Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h5>
+              Witaj, User
+</h5>,
+            <Search
+              currenciesTable={
+                            Array [
+                                          "usd",
+                                          "chf",
+                                          "aud",
+                                        ]
+              }
+              getCurrenciesTable={[Function]}
+              getCurrency={[Function]}
+              searchError={false}
+/>,
+            <Card
+              addCard={[Function]}
+              cardData={
+                            Object {
+                                          "code": "USD",
+                                          "currency": "dolar amerykański",
+                                          "id": "someId",
+                                          "rates": Array [
+                                            Object {
+                                              "ask": 3.3,
+                                              "bid": 3.4,
+                                            },
+                                          ],
+                                        }
+              }
+              cards={
+                            Array [
+                                          Object {
+                                            "code": "USD",
+                                            "currency": "dolar amerykański",
+                                            "id": "someId",
+                                            "rates": Array [
+                                              Object {
+                                                "ask": 3.3,
+                                                "bid": 3.4,
+                                              },
+                                            ],
+                                          },
+                                          Object {
+                                            "code": "USD",
+                                            "currency": "dolar amerykański",
+                                            "id": "someId2",
+                                            "rates": Object {
+                                              "ask": 3.3,
+                                              "bid": 3.4,
+                                            },
+                                          },
+                                        ]
+              }
+              isTemporary={true}
+              showDetails={[Function]}
+              signedIn={true}
+              userSignedIn="User"
+/>,
+            <p
+              style={
+                            Object {
+                                          "color": "red",
+                                          "textAlign": "center",
+                                        }
+              }
+>
+              <br />
+              error
+</p>,
+            <CardList
+              cards={
+                            Array [
+                                          Object {
+                                            "code": "USD",
+                                            "currency": "dolar amerykański",
+                                            "id": "someId",
+                                            "rates": Array [
+                                              Object {
+                                                "ask": 3.3,
+                                                "bid": 3.4,
+                                              },
+                                            ],
+                                          },
+                                          Object {
+                                            "code": "USD",
+                                            "currency": "dolar amerykański",
+                                            "id": "someId2",
+                                            "rates": Object {
+                                              "ask": 3.3,
+                                              "bid": 3.4,
+                                            },
+                                          },
+                                        ]
+              }
+              deleteCard={[Function]}
+              showDetails={[Function]}
+              signedIn={true}
+              userSignedIn="User"
+/>,
+          ],
+          "className": "col-4 SearchView",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Witaj, User",
+            },
+            "ref": null,
+            "rendered": "Witaj, User",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "currenciesTable": Array [
+                "usd",
+                "chf",
+                "aud",
+              ],
+              "getCurrenciesTable": [Function],
+              "getCurrency": [Function],
+              "searchError": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "addCard": [Function],
+              "cardData": Object {
+                "code": "USD",
+                "currency": "dolar amerykański",
+                "id": "someId",
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
+              },
+              "cards": Array [
+                Object {
+                  "code": "USD",
+                  "currency": "dolar amerykański",
+                  "id": "someId",
+                  "rates": Array [
+                    Object {
+                      "ask": 3.3,
+                      "bid": 3.4,
+                    },
+                  ],
+                },
+                Object {
+                  "code": "USD",
+                  "currency": "dolar amerykański",
+                  "id": "someId2",
+                  "rates": Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                },
+              ],
+              "isTemporary": true,
+              "showDetails": [Function],
+              "signedIn": true,
+              "userSignedIn": "User",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <br />,
+                "error",
+              ],
+              "style": Object {
+                "color": "red",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              "error",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "cards": Array [
+                Object {
+                  "code": "USD",
+                  "currency": "dolar amerykański",
+                  "id": "someId",
+                  "rates": Array [
+                    Object {
+                      "ask": 3.3,
+                      "bid": 3.4,
+                    },
+                  ],
+                },
+                Object {
+                  "code": "USD",
+                  "currency": "dolar amerykański",
+                  "id": "someId2",
+                  "rates": Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                },
+              ],
+              "deleteCard": [Function],
+              "showDetails": [Function],
+              "signedIn": true,
+              "userSignedIn": "User",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    Symbol(enzyme.__options__): Object {
+      "adapter": ReactSixteenAdapter {
+        "options": Object {
+          "enableComponentDidUpdateOnSetState": true,
+        },
+      },
+    },
+  },
+  "props": Object {
+    "addCard": [Function],
+    "deleteCard": [Function],
+    "getCurrenciesTable": [Function],
+    "getCurrency": [Function],
+    "searchViewData": Object {
+      "addCardError": true,
+      "addCardErrorMessage": "error",
+      "cards": Array [
+        Object {
+          "code": "USD",
+          "currency": "dolar amerykański",
+          "id": "someId",
+          "rates": Array [
+            Object {
+              "ask": 3.3,
+              "bid": 3.4,
+            },
+          ],
+        },
+        Object {
+          "code": "USD",
+          "currency": "dolar amerykański",
+          "id": "someId2",
+          "rates": Object {
+            "ask": 3.3,
+            "bid": 3.4,
+          },
+        },
+      ],
+      "currenciesTable": Array [
+        "usd",
+        "chf",
+        "aud",
+      ],
+      "searchError": false,
+      "signedIn": true,
+      "temporaryCard": Object {
+        "code": "USD",
+        "currency": "dolar amerykański",
+        "id": "someId",
+        "rates": Array [
+          Object {
+            "ask": 3.3,
+            "bid": 3.4,
+          },
+        ],
+      },
+      "userSignedIn": "User",
+    },
+    "showDetails": [Function],
+  },
+}
+`;

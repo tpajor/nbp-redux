@@ -9,7 +9,7 @@ import CardList from './CardList';
 
 import './SearchContainer.css';
 
-const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard, getCurrenciesTable }) => {
+export const SearchContainer = ({ getCurrency, searchViewData, addCard, showDetails, deleteCard, getCurrenciesTable }) => {
   return (
     <div className={'col-4 SearchView'}>
       {searchViewData.userSignedIn ? <h5>{`Witaj, ${searchViewData.userSignedIn}`}</h5> : ''}

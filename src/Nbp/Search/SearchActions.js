@@ -1,6 +1,6 @@
-import uuid from 'uuid';
 import axios from 'axios';
 
+import getUniqueId from '../../Services/uniqueIdGenerator';
 import callApi from '../../Services/apiCaller';
 import { fetchUsers } from '../../Login/LoginActions';
 
@@ -32,10 +32,7 @@ export function addCardRequest(card, userName, isSignedIn, cards) {
     if (cardExists) {
       return dispatch(addCardError());
     } else {
-      let id = uuid.v4();
-      if (process.env.NODE_ENV === 'test') {
-        id = 'someId';
-      }
+      const id = getUniqueId();
       if (isSignedIn) {
         return callApi('card', 'post', { card: { ...card, id }, userName }).then(res => {
           dispatch(addCard({ ...card, id }));

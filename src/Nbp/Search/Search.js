@@ -92,7 +92,7 @@ export default class Search extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className={'Form'}>
         <div className={'form-group col-8 Form FormInput'}>
-          <input className={`form-control  ${(inputError || searchError) ? 'is-invalid' : ''}`}
+          <input className={`form-control ${(inputError || searchError) ? 'is-invalid' : ''}`}
             onFocus={this.handleFocus}
             type="text" 
             value={currencyCode}
