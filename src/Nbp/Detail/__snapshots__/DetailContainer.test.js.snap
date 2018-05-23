@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailContainer component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DetailContainer
+    detailViewData={
+        Object {
+            "currencyCodeToViewInDetail": "usd",
+            "detailsInputError": false,
+            "detailsInputErrorMessage": "",
+            "lastRates": Array [
+              Object {
+                "ask": 3.5983,
+                "bid": 3.5271,
+                "effectiveDate": "2018-05-07",
+                "no": "087/C/NBP/2018",
+              },
+              Object {
+                "ask": 3.6088,
+                "bid": 3.5374,
+                "effectiveDate": "2018-05-08",
+                "no": "088/C/NBP/2018",
+              },
+            ],
+            "signedIn": true,
+          }
+    }
+    getInputedNumberOfLastRates={[Function]}
+    signInOrOut={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <ReactLiveClock
+          className={null}
+          date={null}
+          format="YYYY-MM-DD HH:mm:ss"
+          interval={1000}
+          ticking={true}
+          timezone="Europe/Warsaw"
+/>,
+        <Link
+          className="btn btn-primary SignButton"
+          onClick={[Function]}
+          replace={false}
+          to="/login"
+>
+          Wyloguj
+</Link>,
+        <div
+          className="Chart"
+          id="Chart"
+>
+          <Input
+                    currencyCodeToViewInDetail="usd"
+                    detailsInputError={false}
+                    detailsInputErrorMessage=""
+                    getInputedNumberOfLastRates={[Function]}
+          />
+          <Chart
+                    contWidth={240}
+                    dataToPlot={
+                              Array [
+                                        Object {
+                                          "ask": 3.5983,
+                                          "bid": 3.5271,
+                                          "effectiveDate": "2018-05-07",
+                                          "no": "087/C/NBP/2018",
+                                        },
+                                        Object {
+                                          "ask": 3.6088,
+                                          "bid": 3.5374,
+                                          "effectiveDate": "2018-05-08",
+                                          "no": "088/C/NBP/2018",
+                                        },
+                                      ]
+                    }
+          />
+</div>,
+      ],
+      "className": "col-8 DetailView",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": null,
+          "date": null,
+          "format": "YYYY-MM-DD HH:mm:ss",
+          "interval": 1000,
+          "ticking": true,
+          "timezone": "Europe/Warsaw",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Wyloguj",
+          "className": "btn btn-primary SignButton",
+          "onClick": [Function],
+          "replace": false,
+          "to": "/login",
+        },
+        "ref": null,
+        "rendered": "Wyloguj",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Input
+              currencyCodeToViewInDetail="usd"
+              detailsInputError={false}
+              detailsInputErrorMessage=""
+              getInputedNumberOfLastRates={[Function]}
+/>,
+            <Chart
+              contWidth={240}
+              dataToPlot={
+                            Array [
+                                          Object {
+                                            "ask": 3.5983,
+                                            "bid": 3.5271,
+                                            "effectiveDate": "2018-05-07",
+                                            "no": "087/C/NBP/2018",
+                                          },
+                                          Object {
+                                            "ask": 3.6088,
+                                            "bid": 3.5374,
+                                            "effectiveDate": "2018-05-08",
+                                            "no": "088/C/NBP/2018",
+                                          },
+                                        ]
+              }
+/>,
+          ],
+          "className": "Chart",
+          "id": "Chart",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "currencyCodeToViewInDetail": "usd",
+              "detailsInputError": false,
+              "detailsInputErrorMessage": "",
+              "getInputedNumberOfLastRates": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "contWidth": 240,
+              "dataToPlot": Array [
+                Object {
+                  "ask": 3.5983,
+                  "bid": 3.5271,
+                  "effectiveDate": "2018-05-07",
+                  "no": "087/C/NBP/2018",
+                },
+                Object {
+                  "ask": 3.6088,
+                  "bid": 3.5374,
+                  "effectiveDate": "2018-05-08",
+                  "no": "088/C/NBP/2018",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ReactLiveClock
+            className={null}
+            date={null}
+            format="YYYY-MM-DD HH:mm:ss"
+            interval={1000}
+            ticking={true}
+            timezone="Europe/Warsaw"
+/>,
+          <Link
+            className="btn btn-primary SignButton"
+            onClick={[Function]}
+            replace={false}
+            to="/login"
+>
+            Wyloguj
+</Link>,
+          <div
+            className="Chart"
+            id="Chart"
+>
+            <Input
+                        currencyCodeToViewInDetail="usd"
+                        detailsInputError={false}
+                        detailsInputErrorMessage=""
+                        getInputedNumberOfLastRates={[Function]}
+            />
+            <Chart
+                        contWidth={240}
+                        dataToPlot={
+                                    Array [
+                                                Object {
+                                                  "ask": 3.5983,
+                                                  "bid": 3.5271,
+                                                  "effectiveDate": "2018-05-07",
+                                                  "no": "087/C/NBP/2018",
+                                                },
+                                                Object {
+                                                  "ask": 3.6088,
+                                                  "bid": 3.5374,
+                                                  "effectiveDate": "2018-05-08",
+                                                  "no": "088/C/NBP/2018",
+                                                },
+                                              ]
+                        }
+            />
+</div>,
+        ],
+        "className": "col-8 DetailView",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": null,
+            "date": null,
+            "format": "YYYY-MM-DD HH:mm:ss",
+            "interval": 1000,
+            "ticking": true,
+            "timezone": "Europe/Warsaw",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Wyloguj",
+            "className": "btn btn-primary SignButton",
+            "onClick": [Function],
+            "replace": false,
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "Wyloguj",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Input
+                currencyCodeToViewInDetail="usd"
+                detailsInputError={false}
+                detailsInputErrorMessage=""
+                getInputedNumberOfLastRates={[Function]}
+/>,
+              <Chart
+                contWidth={240}
+                dataToPlot={
+                                Array [
+                                                Object {
+                                                  "ask": 3.5983,
+                                                  "bid": 3.5271,
+                                                  "effectiveDate": "2018-05-07",
+                                                  "no": "087/C/NBP/2018",
+                                                },
+                                                Object {
+                                                  "ask": 3.6088,
+                                                  "bid": 3.5374,
+                                                  "effectiveDate": "2018-05-08",
+                                                  "no": "088/C/NBP/2018",
+                                                },
+                                              ]
+                }
+/>,
+            ],
+            "className": "Chart",
+            "id": "Chart",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "currencyCodeToViewInDetail": "usd",
+                "detailsInputError": false,
+                "detailsInputErrorMessage": "",
+                "getInputedNumberOfLastRates": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "contWidth": 240,
+                "dataToPlot": Array [
+                  Object {
+                    "ask": 3.5983,
+                    "bid": 3.5271,
+                    "effectiveDate": "2018-05-07",
+                    "no": "087/C/NBP/2018",
+                  },
+                  Object {
+                    "ask": 3.6088,
+                    "bid": 3.5374,
+                    "effectiveDate": "2018-05-08",
+                    "no": "088/C/NBP/2018",
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

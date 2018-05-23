@@ -27,7 +27,8 @@ export class DetailContainer extends React.Component {
   };
 
   setWidth = () => {
-    const width = document.getElementById('Chart').clientWidth;
+    let width = 300;
+    if(document.getElementById('Chart')) width = document.getElementById('Chart').clientWidth;
     this.setState({ contWidth: width * 0.8, });
   };
 

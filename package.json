@@ -49,5 +49,8 @@
     "start": "cd server && node server.js",
     "server": "cd server && nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start-front\""
+  },
+  "devDependencies": {
+    "react-router-enzyme-context": "^1.2.0"
   }
 }

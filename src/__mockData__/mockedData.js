@@ -22,10 +22,10 @@ const login = {
   users: [user, user2]
 };
 
-const lastRates = { table: "C", code: "USD", currency: "dolar amerykański", rates: [
+const lastRates = [
   { ask: 3.5983, bid: 3.5271, effectiveDate: "2018-05-07", no: "087/C/NBP/2018" },
   { ask: 3.6088, bid: 3.5374, effectiveDate: "2018-05-08", no: "088/C/NBP/2018" }
-]};
+];
 
 const detail = {
   lastRates: lastRates,

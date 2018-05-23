@@ -73,7 +73,7 @@ describe('SearchContainer component', () => {
     });
 
   it('should render correctly', () => {
-    const enzymeWrapper = setup();
+    const { enzymeWrapper } = setup();
     
     expect(enzymeWrapper).toMatchSnapshot();
   });
