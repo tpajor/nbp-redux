@@ -24,7 +24,7 @@ export class DetailContainer extends React.Component {
 
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.setWidth);
-  };
+  };  
 
   setWidth = () => {
     let width = 300;

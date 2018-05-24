@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Input
+    currencyCodeToViewInDetail="USD"
+    detailsInputError={false}
+    detailsInputErrorMessage=""
+    getInputedNumberOfLastRates={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="form-group col-2 Input"
+>
+          <input
+                    className="form-control-plaintext"
+                    readOnly={true}
+                    type="text"
+                    value="USD"
+          />
+</div>,
+        <div
+          className="form-group col-6 Form"
+>
+          <input
+                    className="form-control "
+                    onChange={[Function]}
+                    placeholder="Wpisz liczbę ostatnich kursów"
+                    type="text"
+                    value=""
+          />
+          
+</div>,
+        <button
+          className="btn btn-primary col-4 InputButton"
+          disabled={false}
+          type="submit"
+>
+          Pokaż
+</button>,
+      ],
+      "className": "Form",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <input
+            className="form-control-plaintext"
+            readOnly={true}
+            type="text"
+            value="USD"
+/>,
+          "className": "form-group col-2 Input",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "form-control-plaintext",
+            "readOnly": true,
+            "type": "text",
+            "value": "USD",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="form-control "
+              onChange={[Function]}
+              placeholder="Wpisz liczbę ostatnich kursów"
+              type="text"
+              value=""
+/>,
+            "",
+          ],
+          "className": "form-group col-6 Form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "form-control ",
+              "onChange": [Function],
+              "placeholder": "Wpisz liczbę ostatnich kursów",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "",
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Pokaż",
+          "className": "btn btn-primary col-4 InputButton",
+          "disabled": false,
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Pokaż",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="form-group col-2 Input"
+>
+            <input
+                        className="form-control-plaintext"
+                        readOnly={true}
+                        type="text"
+                        value="USD"
+            />
+</div>,
+          <div
+            className="form-group col-6 Form"
+>
+            <input
+                        className="form-control "
+                        onChange={[Function]}
+                        placeholder="Wpisz liczbę ostatnich kursów"
+                        type="text"
+                        value=""
+            />
+            
+</div>,
+          <button
+            className="btn btn-primary col-4 InputButton"
+            disabled={false}
+            type="submit"
+>
+            Pokaż
+</button>,
+        ],
+        "className": "Form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <input
+              className="form-control-plaintext"
+              readOnly={true}
+              type="text"
+              value="USD"
+/>,
+            "className": "form-group col-2 Input",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "form-control-plaintext",
+              "readOnly": true,
+              "type": "text",
+              "value": "USD",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="form-control "
+                onChange={[Function]}
+                placeholder="Wpisz liczbę ostatnich kursów"
+                type="text"
+                value=""
+/>,
+              "",
+            ],
+            "className": "form-group col-6 Form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "form-control ",
+                "onChange": [Function],
+                "placeholder": "Wpisz liczbę ostatnich kursów",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "",
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Pokaż",
+            "className": "btn btn-primary col-4 InputButton",
+            "disabled": false,
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Pokaż",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

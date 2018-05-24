@@ -1,0 +1,1243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Chart
+    constWidth={400}
+    dataToPlot={
+        Array [
+            Object {
+              "ask": 3.5983,
+              "bid": 3.5271,
+              "effectiveDate": "2018-05-07",
+              "no": "087/C/NBP/2018",
+            },
+            Object {
+              "ask": 3.6088,
+              "bid": 3.5374,
+              "effectiveDate": "2018-05-08",
+              "no": "088/C/NBP/2018",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="text-center"
+>
+          2 ostatnie kursy
+</h3>,
+        <LineChart
+          barCategoryGap="10%"
+          barGap={4}
+          data={
+                    Array [
+                              Object {
+                                "ask": 3.5983,
+                                "bid": 3.5271,
+                                "effectiveDate": "2018-05-07",
+                                "no": "087/C/NBP/2018",
+                              },
+                              Object {
+                                "ask": 3.6088,
+                                "bid": 3.5374,
+                                "effectiveDate": "2018-05-08",
+                                "no": "088/C/NBP/2018",
+                              },
+                            ]
+          }
+          height={NaN}
+          layout="horizontal"
+          margin={
+                    Object {
+                              "bottom": 5,
+                              "left": 5,
+                              "right": 5,
+                              "top": 5,
+                            }
+          }
+          reverseStackOrder={false}
+          stackOffset="none"
+          width={undefined}
+>
+          <XAxis
+                    allowDataOverflow={false}
+                    allowDecimals={true}
+                    allowDuplicatedCategory={true}
+                    dataKey="name"
+                    domain={
+                              Array [
+                                        0,
+                                        "auto",
+                                      ]
+                    }
+                    height={30}
+                    hide={true}
+                    mirror={false}
+                    orientation="bottom"
+                    padding={
+                              Object {
+                                        "left": 0,
+                                        "right": 0,
+                                      }
+                    }
+                    reversed={false}
+                    scale="auto"
+                    tickCount={5}
+                    type="category"
+                    width={0}
+                    xAxisId={0}
+          />
+          <YAxis
+                    allowDataOverflow={false}
+                    allowDecimals={true}
+                    allowDuplicatedCategory={true}
+                    domain={
+                              Array [
+                                        "auto",
+                                        "auto",
+                                      ]
+                    }
+                    height={0}
+                    hide={false}
+                    mirror={false}
+                    orientation="left"
+                    padding={
+                              Object {
+                                        "bottom": 0,
+                                        "top": 0,
+                                      }
+                    }
+                    reversed={false}
+                    scale="auto"
+                    tickCount={5}
+                    type="number"
+                    width={60}
+                    yAxisId={0}
+          />
+          <CartesianGrid
+                    fill="none"
+                    horizontal={true}
+                    horizontalFill={Array []}
+                    horizontalPoints={Array []}
+                    stroke="#ccc"
+                    strokeDasharray="3 3"
+                    vertical={true}
+                    verticalFill={Array []}
+                    verticalPoints={Array []}
+          />
+          <Tooltip
+                    active={false}
+                    animationDuration={400}
+                    animationEasing="ease"
+                    coordinate={
+                              Object {
+                                        "x": 0,
+                                        "y": 0,
+                                      }
+                    }
+                    cursor={true}
+                    cursorStyle={Object {}}
+                    filterNull={true}
+                    isAnimationActive={true}
+                    itemSorter={[Function]}
+                    itemStyle={Object {}}
+                    labelStyle={Object {}}
+                    offset={10}
+                    separator=" : "
+                    useTranslate3d={false}
+                    viewBox={
+                              Object {
+                                        "x1": 0,
+                                        "x2": 0,
+                                        "y1": 0,
+                                        "y2": 0,
+                                      }
+                    }
+                    wrapperStyle={Object {}}
+          />
+          <Legend
+                    align="center"
+                    iconSize={14}
+                    layout="horizontal"
+                    verticalAlign="bottom"
+          />
+          <Line
+                    activeDot={
+                              Object {
+                                        "r": 4,
+                                      }
+                    }
+                    animationBegin={0}
+                    animationDuration={1500}
+                    animationEasing="ease"
+                    connectNulls={false}
+                    dataKey="kupno"
+                    dot={false}
+                    fill="#fff"
+                    hide={false}
+                    isAnimationActive={true}
+                    legendType="line"
+                    onAnimationEnd={[Function]}
+                    onAnimationStart={[Function]}
+                    points={Array []}
+                    stroke="#8884d8"
+                    strokeWidth={1}
+                    type="monotone"
+                    xAxisId={0}
+                    yAxisId={0}
+          />
+          <Line
+                    activeDot={
+                              Object {
+                                        "r": 4,
+                                      }
+                    }
+                    animationBegin={0}
+                    animationDuration={1500}
+                    animationEasing="ease"
+                    connectNulls={false}
+                    dataKey="sprzedaż"
+                    dot={false}
+                    fill="#fff"
+                    hide={false}
+                    isAnimationActive={true}
+                    legendType="line"
+                    onAnimationEnd={[Function]}
+                    onAnimationStart={[Function]}
+                    points={Array []}
+                    stroke="#82ca9d"
+                    strokeWidth={1}
+                    type="monotone"
+                    xAxisId={0}
+                    yAxisId={0}
+          />
+</LineChart>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "2 ostatnie kursy",
+          "className": "text-center",
+        },
+        "ref": null,
+        "rendered": "2 ostatnie kursy",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "barCategoryGap": "10%",
+          "barGap": 4,
+          "children": Array [
+            <XAxis
+              allowDataOverflow={false}
+              allowDecimals={true}
+              allowDuplicatedCategory={true}
+              dataKey="name"
+              domain={
+                            Array [
+                                          0,
+                                          "auto",
+                                        ]
+              }
+              height={30}
+              hide={true}
+              mirror={false}
+              orientation="bottom"
+              padding={
+                            Object {
+                                          "left": 0,
+                                          "right": 0,
+                                        }
+              }
+              reversed={false}
+              scale="auto"
+              tickCount={5}
+              type="category"
+              width={0}
+              xAxisId={0}
+/>,
+            <YAxis
+              allowDataOverflow={false}
+              allowDecimals={true}
+              allowDuplicatedCategory={true}
+              domain={
+                            Array [
+                                          "auto",
+                                          "auto",
+                                        ]
+              }
+              height={0}
+              hide={false}
+              mirror={false}
+              orientation="left"
+              padding={
+                            Object {
+                                          "bottom": 0,
+                                          "top": 0,
+                                        }
+              }
+              reversed={false}
+              scale="auto"
+              tickCount={5}
+              type="number"
+              width={60}
+              yAxisId={0}
+/>,
+            <CartesianGrid
+              fill="none"
+              horizontal={true}
+              horizontalFill={Array []}
+              horizontalPoints={Array []}
+              stroke="#ccc"
+              strokeDasharray="3 3"
+              vertical={true}
+              verticalFill={Array []}
+              verticalPoints={Array []}
+/>,
+            <Tooltip
+              active={false}
+              animationDuration={400}
+              animationEasing="ease"
+              coordinate={
+                            Object {
+                                          "x": 0,
+                                          "y": 0,
+                                        }
+              }
+              cursor={true}
+              cursorStyle={Object {}}
+              filterNull={true}
+              isAnimationActive={true}
+              itemSorter={[Function]}
+              itemStyle={Object {}}
+              labelStyle={Object {}}
+              offset={10}
+              separator=" : "
+              useTranslate3d={false}
+              viewBox={
+                            Object {
+                                          "x1": 0,
+                                          "x2": 0,
+                                          "y1": 0,
+                                          "y2": 0,
+                                        }
+              }
+              wrapperStyle={Object {}}
+/>,
+            <Legend
+              align="center"
+              iconSize={14}
+              layout="horizontal"
+              verticalAlign="bottom"
+/>,
+            <Line
+              activeDot={
+                            Object {
+                                          "r": 4,
+                                        }
+              }
+              animationBegin={0}
+              animationDuration={1500}
+              animationEasing="ease"
+              connectNulls={false}
+              dataKey="kupno"
+              dot={false}
+              fill="#fff"
+              hide={false}
+              isAnimationActive={true}
+              legendType="line"
+              onAnimationEnd={[Function]}
+              onAnimationStart={[Function]}
+              points={Array []}
+              stroke="#8884d8"
+              strokeWidth={1}
+              type="monotone"
+              xAxisId={0}
+              yAxisId={0}
+/>,
+            <Line
+              activeDot={
+                            Object {
+                                          "r": 4,
+                                        }
+              }
+              animationBegin={0}
+              animationDuration={1500}
+              animationEasing="ease"
+              connectNulls={false}
+              dataKey="sprzedaż"
+              dot={false}
+              fill="#fff"
+              hide={false}
+              isAnimationActive={true}
+              legendType="line"
+              onAnimationEnd={[Function]}
+              onAnimationStart={[Function]}
+              points={Array []}
+              stroke="#82ca9d"
+              strokeWidth={1}
+              type="monotone"
+              xAxisId={0}
+              yAxisId={0}
+/>,
+          ],
+          "data": Array [
+            Object {
+              "ask": 3.5983,
+              "bid": 3.5271,
+              "effectiveDate": "2018-05-07",
+              "no": "087/C/NBP/2018",
+            },
+            Object {
+              "ask": 3.6088,
+              "bid": 3.5374,
+              "effectiveDate": "2018-05-08",
+              "no": "088/C/NBP/2018",
+            },
+          ],
+          "height": NaN,
+          "layout": "horizontal",
+          "margin": Object {
+            "bottom": 5,
+            "left": 5,
+            "right": 5,
+            "top": 5,
+          },
+          "reverseStackOrder": false,
+          "stackOffset": "none",
+          "width": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowDataOverflow": false,
+              "allowDecimals": true,
+              "allowDuplicatedCategory": true,
+              "dataKey": "name",
+              "domain": Array [
+                0,
+                "auto",
+              ],
+              "height": 30,
+              "hide": true,
+              "mirror": false,
+              "orientation": "bottom",
+              "padding": Object {
+                "left": 0,
+                "right": 0,
+              },
+              "reversed": false,
+              "scale": "auto",
+              "tickCount": 5,
+              "type": "category",
+              "width": 0,
+              "xAxisId": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowDataOverflow": false,
+              "allowDecimals": true,
+              "allowDuplicatedCategory": true,
+              "domain": Array [
+                "auto",
+                "auto",
+              ],
+              "height": 0,
+              "hide": false,
+              "mirror": false,
+              "orientation": "left",
+              "padding": Object {
+                "bottom": 0,
+                "top": 0,
+              },
+              "reversed": false,
+              "scale": "auto",
+              "tickCount": 5,
+              "type": "number",
+              "width": 60,
+              "yAxisId": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "fill": "none",
+              "horizontal": true,
+              "horizontalFill": Array [],
+              "horizontalPoints": Array [],
+              "stroke": "#ccc",
+              "strokeDasharray": "3 3",
+              "vertical": true,
+              "verticalFill": Array [],
+              "verticalPoints": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "active": false,
+              "animationDuration": 400,
+              "animationEasing": "ease",
+              "coordinate": Object {
+                "x": 0,
+                "y": 0,
+              },
+              "cursor": true,
+              "cursorStyle": Object {},
+              "filterNull": true,
+              "isAnimationActive": true,
+              "itemSorter": [Function],
+              "itemStyle": Object {},
+              "labelStyle": Object {},
+              "offset": 10,
+              "separator": " : ",
+              "useTranslate3d": false,
+              "viewBox": Object {
+                "x1": 0,
+                "x2": 0,
+                "y1": 0,
+                "y2": 0,
+              },
+              "wrapperStyle": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "align": "center",
+              "iconSize": 14,
+              "layout": "horizontal",
+              "verticalAlign": "bottom",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeDot": Object {
+                "r": 4,
+              },
+              "animationBegin": 0,
+              "animationDuration": 1500,
+              "animationEasing": "ease",
+              "connectNulls": false,
+              "dataKey": "kupno",
+              "dot": false,
+              "fill": "#fff",
+              "hide": false,
+              "isAnimationActive": true,
+              "legendType": "line",
+              "onAnimationEnd": [Function],
+              "onAnimationStart": [Function],
+              "points": Array [],
+              "stroke": "#8884d8",
+              "strokeWidth": 1,
+              "type": "monotone",
+              "xAxisId": 0,
+              "yAxisId": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeDot": Object {
+                "r": 4,
+              },
+              "animationBegin": 0,
+              "animationDuration": 1500,
+              "animationEasing": "ease",
+              "connectNulls": false,
+              "dataKey": "sprzedaż",
+              "dot": false,
+              "fill": "#fff",
+              "hide": false,
+              "isAnimationActive": true,
+              "legendType": "line",
+              "onAnimationEnd": [Function],
+              "onAnimationStart": [Function],
+              "points": Array [],
+              "stroke": "#82ca9d",
+              "strokeWidth": 1,
+              "type": "monotone",
+              "xAxisId": 0,
+              "yAxisId": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="text-center"
+>
+            2 ostatnie kursy
+</h3>,
+          <LineChart
+            barCategoryGap="10%"
+            barGap={4}
+            data={
+                        Array [
+                                    Object {
+                                      "ask": 3.5983,
+                                      "bid": 3.5271,
+                                      "effectiveDate": "2018-05-07",
+                                      "no": "087/C/NBP/2018",
+                                    },
+                                    Object {
+                                      "ask": 3.6088,
+                                      "bid": 3.5374,
+                                      "effectiveDate": "2018-05-08",
+                                      "no": "088/C/NBP/2018",
+                                    },
+                                  ]
+            }
+            height={NaN}
+            layout="horizontal"
+            margin={
+                        Object {
+                                    "bottom": 5,
+                                    "left": 5,
+                                    "right": 5,
+                                    "top": 5,
+                                  }
+            }
+            reverseStackOrder={false}
+            stackOffset="none"
+            width={undefined}
+>
+            <XAxis
+                        allowDataOverflow={false}
+                        allowDecimals={true}
+                        allowDuplicatedCategory={true}
+                        dataKey="name"
+                        domain={
+                                    Array [
+                                                0,
+                                                "auto",
+                                              ]
+                        }
+                        height={30}
+                        hide={true}
+                        mirror={false}
+                        orientation="bottom"
+                        padding={
+                                    Object {
+                                                "left": 0,
+                                                "right": 0,
+                                              }
+                        }
+                        reversed={false}
+                        scale="auto"
+                        tickCount={5}
+                        type="category"
+                        width={0}
+                        xAxisId={0}
+            />
+            <YAxis
+                        allowDataOverflow={false}
+                        allowDecimals={true}
+                        allowDuplicatedCategory={true}
+                        domain={
+                                    Array [
+                                                "auto",
+                                                "auto",
+                                              ]
+                        }
+                        height={0}
+                        hide={false}
+                        mirror={false}
+                        orientation="left"
+                        padding={
+                                    Object {
+                                                "bottom": 0,
+                                                "top": 0,
+                                              }
+                        }
+                        reversed={false}
+                        scale="auto"
+                        tickCount={5}
+                        type="number"
+                        width={60}
+                        yAxisId={0}
+            />
+            <CartesianGrid
+                        fill="none"
+                        horizontal={true}
+                        horizontalFill={Array []}
+                        horizontalPoints={Array []}
+                        stroke="#ccc"
+                        strokeDasharray="3 3"
+                        vertical={true}
+                        verticalFill={Array []}
+                        verticalPoints={Array []}
+            />
+            <Tooltip
+                        active={false}
+                        animationDuration={400}
+                        animationEasing="ease"
+                        coordinate={
+                                    Object {
+                                                "x": 0,
+                                                "y": 0,
+                                              }
+                        }
+                        cursor={true}
+                        cursorStyle={Object {}}
+                        filterNull={true}
+                        isAnimationActive={true}
+                        itemSorter={[Function]}
+                        itemStyle={Object {}}
+                        labelStyle={Object {}}
+                        offset={10}
+                        separator=" : "
+                        useTranslate3d={false}
+                        viewBox={
+                                    Object {
+                                                "x1": 0,
+                                                "x2": 0,
+                                                "y1": 0,
+                                                "y2": 0,
+                                              }
+                        }
+                        wrapperStyle={Object {}}
+            />
+            <Legend
+                        align="center"
+                        iconSize={14}
+                        layout="horizontal"
+                        verticalAlign="bottom"
+            />
+            <Line
+                        activeDot={
+                                    Object {
+                                                "r": 4,
+                                              }
+                        }
+                        animationBegin={0}
+                        animationDuration={1500}
+                        animationEasing="ease"
+                        connectNulls={false}
+                        dataKey="kupno"
+                        dot={false}
+                        fill="#fff"
+                        hide={false}
+                        isAnimationActive={true}
+                        legendType="line"
+                        onAnimationEnd={[Function]}
+                        onAnimationStart={[Function]}
+                        points={Array []}
+                        stroke="#8884d8"
+                        strokeWidth={1}
+                        type="monotone"
+                        xAxisId={0}
+                        yAxisId={0}
+            />
+            <Line
+                        activeDot={
+                                    Object {
+                                                "r": 4,
+                                              }
+                        }
+                        animationBegin={0}
+                        animationDuration={1500}
+                        animationEasing="ease"
+                        connectNulls={false}
+                        dataKey="sprzedaż"
+                        dot={false}
+                        fill="#fff"
+                        hide={false}
+                        isAnimationActive={true}
+                        legendType="line"
+                        onAnimationEnd={[Function]}
+                        onAnimationStart={[Function]}
+                        points={Array []}
+                        stroke="#82ca9d"
+                        strokeWidth={1}
+                        type="monotone"
+                        xAxisId={0}
+                        yAxisId={0}
+            />
+</LineChart>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "2 ostatnie kursy",
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": "2 ostatnie kursy",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "barCategoryGap": "10%",
+            "barGap": 4,
+            "children": Array [
+              <XAxis
+                allowDataOverflow={false}
+                allowDecimals={true}
+                allowDuplicatedCategory={true}
+                dataKey="name"
+                domain={
+                                Array [
+                                                0,
+                                                "auto",
+                                              ]
+                }
+                height={30}
+                hide={true}
+                mirror={false}
+                orientation="bottom"
+                padding={
+                                Object {
+                                                "left": 0,
+                                                "right": 0,
+                                              }
+                }
+                reversed={false}
+                scale="auto"
+                tickCount={5}
+                type="category"
+                width={0}
+                xAxisId={0}
+/>,
+              <YAxis
+                allowDataOverflow={false}
+                allowDecimals={true}
+                allowDuplicatedCategory={true}
+                domain={
+                                Array [
+                                                "auto",
+                                                "auto",
+                                              ]
+                }
+                height={0}
+                hide={false}
+                mirror={false}
+                orientation="left"
+                padding={
+                                Object {
+                                                "bottom": 0,
+                                                "top": 0,
+                                              }
+                }
+                reversed={false}
+                scale="auto"
+                tickCount={5}
+                type="number"
+                width={60}
+                yAxisId={0}
+/>,
+              <CartesianGrid
+                fill="none"
+                horizontal={true}
+                horizontalFill={Array []}
+                horizontalPoints={Array []}
+                stroke="#ccc"
+                strokeDasharray="3 3"
+                vertical={true}
+                verticalFill={Array []}
+                verticalPoints={Array []}
+/>,
+              <Tooltip
+                active={false}
+                animationDuration={400}
+                animationEasing="ease"
+                coordinate={
+                                Object {
+                                                "x": 0,
+                                                "y": 0,
+                                              }
+                }
+                cursor={true}
+                cursorStyle={Object {}}
+                filterNull={true}
+                isAnimationActive={true}
+                itemSorter={[Function]}
+                itemStyle={Object {}}
+                labelStyle={Object {}}
+                offset={10}
+                separator=" : "
+                useTranslate3d={false}
+                viewBox={
+                                Object {
+                                                "x1": 0,
+                                                "x2": 0,
+                                                "y1": 0,
+                                                "y2": 0,
+                                              }
+                }
+                wrapperStyle={Object {}}
+/>,
+              <Legend
+                align="center"
+                iconSize={14}
+                layout="horizontal"
+                verticalAlign="bottom"
+/>,
+              <Line
+                activeDot={
+                                Object {
+                                                "r": 4,
+                                              }
+                }
+                animationBegin={0}
+                animationDuration={1500}
+                animationEasing="ease"
+                connectNulls={false}
+                dataKey="kupno"
+                dot={false}
+                fill="#fff"
+                hide={false}
+                isAnimationActive={true}
+                legendType="line"
+                onAnimationEnd={[Function]}
+                onAnimationStart={[Function]}
+                points={Array []}
+                stroke="#8884d8"
+                strokeWidth={1}
+                type="monotone"
+                xAxisId={0}
+                yAxisId={0}
+/>,
+              <Line
+                activeDot={
+                                Object {
+                                                "r": 4,
+                                              }
+                }
+                animationBegin={0}
+                animationDuration={1500}
+                animationEasing="ease"
+                connectNulls={false}
+                dataKey="sprzedaż"
+                dot={false}
+                fill="#fff"
+                hide={false}
+                isAnimationActive={true}
+                legendType="line"
+                onAnimationEnd={[Function]}
+                onAnimationStart={[Function]}
+                points={Array []}
+                stroke="#82ca9d"
+                strokeWidth={1}
+                type="monotone"
+                xAxisId={0}
+                yAxisId={0}
+/>,
+            ],
+            "data": Array [
+              Object {
+                "ask": 3.5983,
+                "bid": 3.5271,
+                "effectiveDate": "2018-05-07",
+                "no": "087/C/NBP/2018",
+              },
+              Object {
+                "ask": 3.6088,
+                "bid": 3.5374,
+                "effectiveDate": "2018-05-08",
+                "no": "088/C/NBP/2018",
+              },
+            ],
+            "height": NaN,
+            "layout": "horizontal",
+            "margin": Object {
+              "bottom": 5,
+              "left": 5,
+              "right": 5,
+              "top": 5,
+            },
+            "reverseStackOrder": false,
+            "stackOffset": "none",
+            "width": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowDataOverflow": false,
+                "allowDecimals": true,
+                "allowDuplicatedCategory": true,
+                "dataKey": "name",
+                "domain": Array [
+                  0,
+                  "auto",
+                ],
+                "height": 30,
+                "hide": true,
+                "mirror": false,
+                "orientation": "bottom",
+                "padding": Object {
+                  "left": 0,
+                  "right": 0,
+                },
+                "reversed": false,
+                "scale": "auto",
+                "tickCount": 5,
+                "type": "category",
+                "width": 0,
+                "xAxisId": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowDataOverflow": false,
+                "allowDecimals": true,
+                "allowDuplicatedCategory": true,
+                "domain": Array [
+                  "auto",
+                  "auto",
+                ],
+                "height": 0,
+                "hide": false,
+                "mirror": false,
+                "orientation": "left",
+                "padding": Object {
+                  "bottom": 0,
+                  "top": 0,
+                },
+                "reversed": false,
+                "scale": "auto",
+                "tickCount": 5,
+                "type": "number",
+                "width": 60,
+                "yAxisId": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "fill": "none",
+                "horizontal": true,
+                "horizontalFill": Array [],
+                "horizontalPoints": Array [],
+                "stroke": "#ccc",
+                "strokeDasharray": "3 3",
+                "vertical": true,
+                "verticalFill": Array [],
+                "verticalPoints": Array [],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "animationDuration": 400,
+                "animationEasing": "ease",
+                "coordinate": Object {
+                  "x": 0,
+                  "y": 0,
+                },
+                "cursor": true,
+                "cursorStyle": Object {},
+                "filterNull": true,
+                "isAnimationActive": true,
+                "itemSorter": [Function],
+                "itemStyle": Object {},
+                "labelStyle": Object {},
+                "offset": 10,
+                "separator": " : ",
+                "useTranslate3d": false,
+                "viewBox": Object {
+                  "x1": 0,
+                  "x2": 0,
+                  "y1": 0,
+                  "y2": 0,
+                },
+                "wrapperStyle": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "align": "center",
+                "iconSize": 14,
+                "layout": "horizontal",
+                "verticalAlign": "bottom",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeDot": Object {
+                  "r": 4,
+                },
+                "animationBegin": 0,
+                "animationDuration": 1500,
+                "animationEasing": "ease",
+                "connectNulls": false,
+                "dataKey": "kupno",
+                "dot": false,
+                "fill": "#fff",
+                "hide": false,
+                "isAnimationActive": true,
+                "legendType": "line",
+                "onAnimationEnd": [Function],
+                "onAnimationStart": [Function],
+                "points": Array [],
+                "stroke": "#8884d8",
+                "strokeWidth": 1,
+                "type": "monotone",
+                "xAxisId": 0,
+                "yAxisId": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeDot": Object {
+                  "r": 4,
+                },
+                "animationBegin": 0,
+                "animationDuration": 1500,
+                "animationEasing": "ease",
+                "connectNulls": false,
+                "dataKey": "sprzedaż",
+                "dot": false,
+                "fill": "#fff",
+                "hide": false,
+                "isAnimationActive": true,
+                "legendType": "line",
+                "onAnimationEnd": [Function],
+                "onAnimationStart": [Function],
+                "points": Array [],
+                "stroke": "#82ca9d",
+                "strokeWidth": 1,
+                "type": "monotone",
+                "xAxisId": 0,
+                "yAxisId": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -28,7 +28,7 @@ const amountOfRatesText = (amount) => {
   if (amount === 1) {
     return 'Najnowszy kurs';
   } else if (amount % 10 === 2 || amount % 10 === 3 || amount % 10 === 4) {
-    return `${amount} ostanie kursy`
+    return `${amount} ostatnie kursy`
   } else {
     return `${amount} ostatnich kursów`;
   }
