@@ -8,7 +8,7 @@ import { signInOrOut, registerUserRequest } from './LoginActions';
 
 import './Login.css';
 
-class Login extends React.Component {
+export class Login extends React.Component {
   state = {
     userName: '',
     pass: '',

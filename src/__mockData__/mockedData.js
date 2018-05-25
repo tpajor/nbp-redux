@@ -14,7 +14,7 @@ const search = {
 const user = { userName: 'User', pass: 'pass' };
 const user2 = { userName: 'User2', pass: 'pass2'};
 
-const login = {
+export const login = {
   signingError: true,
   signingErrorMessage: 'error',
   signedIn: true,
