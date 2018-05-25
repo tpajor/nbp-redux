@@ -8,7 +8,7 @@ import { fetchUsers } from './Login/LoginActions';
 import MainView from './Nbp/MainView';
 import Login from './Login/Login';
 
-class App extends React.Component {
+export class App extends React.Component {
   componentWillMount = () => {
     this.props.fetchUsers();
   };
@@ -24,8 +24,6 @@ class App extends React.Component {
     );
   };
 };
-
-App.need = [() => { return fetchUsers(); }];
 
 const mapDispatchToProps = {
   fetchUsers,

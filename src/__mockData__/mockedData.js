@@ -1,7 +1,7 @@
 const card = { id: 'someId', code: 'USD', currency: 'dolar amerykański', rates: [{ ask: 3.3, bid: 3.4 }]};
-const card2 = { id: 'someId2', code: 'USD', currency: 'dolar amerykański', rates: { ask: 3.3, bid: 3.4 }};
+const card2 = { id: 'someId2', code: 'USD', currency: 'dolar amerykański', rates: [{ ask: 3.3, bid: 3.4 }]};
 
-const search = {
+export const search = {
   cards: [card, card2],
   temporaryCard: card,
   searchError: false,
@@ -27,7 +27,7 @@ const lastRates = [
   { ask: 3.6088, bid: 3.5374, effectiveDate: "2018-05-08", no: "088/C/NBP/2018" }
 ];
 
-const detail = {
+export const detail = {
   lastRates: lastRates,
   detailsInputError: false,
   detailsInputErrorMessage: '',

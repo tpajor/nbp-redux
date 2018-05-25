@@ -1,10 +1,9 @@
 import React from 'react';
-import Enzyme, { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { DetailContainer } from './DetailContainer';
 import { detailViewData } from '../../__mockData__/mockedData';
 import ReactRouterEnzymeContext from 'react-router-enzyme-context';
-import { Link } from 'react-router-dom';
 
 Enzyme.configure({ adapter: new Adapter() });
 

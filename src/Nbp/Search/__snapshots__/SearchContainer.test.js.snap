@@ -29,10 +29,12 @@ ShallowWrapper {
                 "code": "USD",
                 "currency": "dolar amerykański",
                 "id": "someId2",
-                "rates": Object {
-                  "ask": 3.3,
-                  "bid": 3.4,
-                },
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
               },
             ],
             "currenciesTable": Array [
@@ -118,10 +120,12 @@ ShallowWrapper {
                                 "code": "USD",
                                 "currency": "dolar amerykański",
                                 "id": "someId2",
-                                "rates": Object {
-                                  "ask": 3.3,
-                                  "bid": 3.4,
-                                },
+                                "rates": Array [
+                                  Object {
+                                    "ask": 3.3,
+                                    "bid": 3.4,
+                                  },
+                                ],
                               },
                             ]
           }
@@ -159,10 +163,12 @@ ShallowWrapper {
                                 "code": "USD",
                                 "currency": "dolar amerykański",
                                 "id": "someId2",
-                                "rates": Object {
-                                  "ask": 3.3,
-                                  "bid": 3.4,
-                                },
+                                "rates": Array [
+                                  Object {
+                                    "ask": 3.3,
+                                    "bid": 3.4,
+                                  },
+                                ],
                               },
                             ]
           }
@@ -238,10 +244,12 @@ ShallowWrapper {
               "code": "USD",
               "currency": "dolar amerykański",
               "id": "someId2",
-              "rates": Object {
-                "ask": 3.3,
-                "bid": 3.4,
-              },
+              "rates": Array [
+                Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              ],
             },
           ],
           "isTemporary": true,
@@ -303,10 +311,12 @@ ShallowWrapper {
               "code": "USD",
               "currency": "dolar amerykański",
               "id": "someId2",
-              "rates": Object {
-                "ask": 3.3,
-                "bid": 3.4,
-              },
+              "rates": Array [
+                Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              ],
             },
           ],
           "deleteCard": [Function],
@@ -375,10 +385,12 @@ ShallowWrapper {
                                       "code": "USD",
                                       "currency": "dolar amerykański",
                                       "id": "someId2",
-                                      "rates": Object {
-                                        "ask": 3.3,
-                                        "bid": 3.4,
-                                      },
+                                      "rates": Array [
+                                        Object {
+                                          "ask": 3.3,
+                                          "bid": 3.4,
+                                        },
+                                      ],
                                     },
                                   ]
             }
@@ -416,10 +428,12 @@ ShallowWrapper {
                                       "code": "USD",
                                       "currency": "dolar amerykański",
                                       "id": "someId2",
-                                      "rates": Object {
-                                        "ask": 3.3,
-                                        "bid": 3.4,
-                                      },
+                                      "rates": Array [
+                                        Object {
+                                          "ask": 3.3,
+                                          "bid": 3.4,
+                                        },
+                                      ],
                                     },
                                   ]
             }
@@ -495,10 +509,12 @@ ShallowWrapper {
                 "code": "USD",
                 "currency": "dolar amerykański",
                 "id": "someId2",
-                "rates": Object {
-                  "ask": 3.3,
-                  "bid": 3.4,
-                },
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
               },
             ],
             "isTemporary": true,
@@ -560,10 +576,12 @@ ShallowWrapper {
                 "code": "USD",
                 "currency": "dolar amerykański",
                 "id": "someId2",
-                "rates": Object {
-                  "ask": 3.3,
-                  "bid": 3.4,
-                },
+                "rates": Array [
+                  Object {
+                    "ask": 3.3,
+                    "bid": 3.4,
+                  },
+                ],
               },
             ],
             "deleteCard": [Function],

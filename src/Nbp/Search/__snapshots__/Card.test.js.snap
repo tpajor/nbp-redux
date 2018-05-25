@@ -36,10 +36,12 @@ ShallowWrapper {
               "code": "USD",
               "currency": "dolar amerykański",
               "id": "someId2",
-              "rates": Object {
-                "ask": 3.3,
-                "bid": 3.4,
-              },
+              "rates": Array [
+                Object {
+                  "ask": 3.3,
+                  "bid": 3.4,
+                },
+              ],
             },
           ]
     }

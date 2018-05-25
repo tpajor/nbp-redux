@@ -1,5 +1,12 @@
 {
   "name": "nbp_redux",
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,6 +58,7 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start-front\""
   },
   "devDependencies": {
+    "fetch-mock": "^6.4.2",
     "react-router-enzyme-context": "^1.2.0"
   }
 }
